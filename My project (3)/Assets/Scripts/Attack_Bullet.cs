@@ -18,9 +18,8 @@ public class Attack_Bullet : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            collision.gameObject.GetComponent<HpSystem>().reduceHp(damage);
-            Destroy(this.gameObject);
-
+            EnemyMove enemyMove = collision.GetComponent<EnemyMove>();
+            enemyMove.OnDamaged();
         }
 
         if (collision.gameObject.tag == "Wall")
