@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Attack_Bullet : MonoBehaviour
 {
-    float speed = 10f;
-    int damage = 50;
+    [SerializeField]
+    private float speed = 10f;
+    [SerializeField]
+    private int damage = 50;
 
     // Update is called once per frame
     void Update()

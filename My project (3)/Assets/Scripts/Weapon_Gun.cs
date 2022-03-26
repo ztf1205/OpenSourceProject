@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Weapon_Gun : MonoBehaviour
 {
-    public GameObject attack_Bullet;
-    public AudioClip audioGunFire;
-    float attackCycle = 0.6f;
-    float timer = 0f;
-    AudioSource audioSource;
+    [SerializeField]
+    private GameObject attack_Bullet;
+    [SerializeField]
+    private AudioClip audioGunFire;
+    [SerializeField]
+    private float attackCycle = 0.6f;
+
+    private float timer = 0f;
+    private AudioSource audioSource;
 
     void Awake()
     {
