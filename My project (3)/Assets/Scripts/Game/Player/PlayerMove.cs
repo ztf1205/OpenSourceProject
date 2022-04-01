@@ -149,11 +149,8 @@ public class PlayerMove : MonoBehaviour
 
     public void HealthDown()
     {
-        if (health > 0)
-        {
-            health--;
-        }
-        else
+        health--;
+        if (health <= 0)
         {
             OnDie();
         }
