@@ -236,8 +236,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000034332, y: 312}
-  m_SizeDelta: {x: 638.0453, y: 327.3887}
+  m_AnchoredPosition: {x: -0.000030518, y: 216}
+  m_SizeDelta: {x: 1312.3641, y: 743.8797}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &474470358
 MonoBehaviour:
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0.7933049, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -272,7 +272,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Title
+  m_Text: "Virtual\n  Funk"
 --- !u!222 &474470359
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -568,7 +568,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -294}
+  m_AnchoredPosition: {x: 0, y: -492}
   m_SizeDelta: {x: 1163.9293, y: 219.9801}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1889926837
@@ -616,7 +616,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1889926840}
-        m_TargetAssemblyTypeName: ButtonFunction, Assembly-CSharp
+        m_TargetAssemblyTypeName: ButtonFunction_Lobby, Assembly-CSharp
         m_MethodName: GameStart
         m_Mode: 1
         m_Arguments:
