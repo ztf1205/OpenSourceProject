@@ -10,10 +10,14 @@ public class Coin : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            
             // Point
             bool isBronze = gameObject.name.Contains("Bronze");
             bool isSilver = gameObject.name.Contains("Sliver");
             bool isGold = gameObject.name.Contains("Gold");
+
+            //Deactive Item
+            gameObject.SetActive(false);
 
             if (isBronze)
             {
@@ -27,9 +31,8 @@ public class Coin : MonoBehaviour
             {
                 gameManager.stagePoint += 300;
             }
+            
 
-            //Deactive Item
-            gameObject.SetActive(false);
         }
 
     }

@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public GameManager gameManager;
     public float maxSpeed;
     public float jumpPower;
+    public int health;
+    public GameManager gameManager;
+
     CapsuleCollider2D capsuleCollider;
     Rigidbody2D rigid;
     SpriteRenderer spriteRenderer;
@@ -118,7 +120,7 @@ public class PlayerMove : MonoBehaviour
     void OnDamaged(Vector2 targetPos)
     {
         // Health Down
-        gameManager.health--;
+        HealthDown();
 
         // Change Layer
         gameObject.layer = 9;
@@ -143,6 +145,18 @@ public class PlayerMove : MonoBehaviour
         
         // View Alpha
         spriteRenderer.color = new Color(1, 1, 1, 1);
+    }
+
+    public void HealthDown()
+    {
+        if (health > 0)
+        {
+            health--;
+        }
+        else
+        {
+            OnDie();
+        }
     }
 
     public void OnDie()
