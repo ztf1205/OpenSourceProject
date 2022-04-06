@@ -21,6 +21,7 @@ public class Attack_Bullet : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             collision.GetComponent<EnemyMove>().OnDamaged();
+            Destroy(this.gameObject);
         }
 
         if (collision.gameObject.tag == "Wall")
