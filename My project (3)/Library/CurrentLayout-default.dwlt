@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 2560
     height: 1357
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 7}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -96,10 +96,10 @@ MonoBehaviour:
     y: 30
     width: 2560
     height: 1307
-  m_MinSize: {x: 709, y: 492}
-  m_MaxSize: {x: 18004, y: 14042}
+  m_MinSize: {x: 708, y: 492}
+  m_MaxSize: {x: 18003, y: 14042}
   vertical: 0
-  controlID: 151
+  controlID: 77
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -119,8 +119,8 @@ MonoBehaviour:
     y: 0
     width: 731
     height: 1307
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_MinSize: {x: 433, y: 492}
   m_MaxSize: {x: 14003, y: 14042}
   vertical: 1
-  controlID: 126
+  controlID: 136
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -463,9 +463,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 880c5f7457c1115448624daaabdba33f, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 9c985aa092f5ff248b7179b225c33c9a, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 5797308331518180761, guid: 880c5f7457c1115448624daaabdba33f, type: 2}
+  - m_Target: {fileID: -2098437413319329507, guid: 9c985aa092f5ff248b7179b225c33c9a, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -505,7 +505,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 17138
+  m_LastSelectedObjectID: -1290
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -594,22 +594,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Weapon/Gun
+    - Assets/Prefabs/Object
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Weapon/Gun
+  - Assets/Prefabs/Object
   m_LastFoldersGridSize: 64
   m_LastProjectPath: C:\Users\USER\Desktop\source tree\My project (3)
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3e450000
-    m_LastClickedID: 17726
-    m_ExpandedIDs: 00000000de440000e0440000ea440000ee4400000245000000ca9a3b
+    m_SelectedIDs: 26450000
+    m_LastClickedID: 17702
+    m_ExpandedIDs: 00000000044500000645000010450000144500002045000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -637,7 +637,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000de440000e0440000
+    m_ExpandedIDs: 000000000445000006450000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -760,7 +760,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 64fbffff06430000
+      m_ExpandedIDs: 64fbffff0c430000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -820,9 +820,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -9.625398, y: 1.2105281, z: 0}
+    m_Target: {x: -11.912135, y: 1.2105281, z: 0}
     speed: 2
-    m_Value: {x: -9.625398, y: 1.2105281, z: 0}
+    m_Value: {x: -11.912135, y: 1.2105281, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
