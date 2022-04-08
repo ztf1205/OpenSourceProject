@@ -3,20 +3,24 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Undefined
+  - Item
+  - Attack
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PostProcessing
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Platform
+  - Enemy
+  - Player
+  - PlayerDamaged
+  - Attack
+  - Item
   - 
   - 
   - 

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3626306058945568772}
   - component: {fileID: 3626306058945568769}
   - component: {fileID: -7389401350562473291}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bronze
-  m_TagString: Item
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

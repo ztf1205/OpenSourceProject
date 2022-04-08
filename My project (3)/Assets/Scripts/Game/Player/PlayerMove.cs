@@ -74,7 +74,7 @@ public class PlayerMove : MonoBehaviour
         if (rigid.velocity.y < 0)
         {
             Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
-            RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask("Flatform"));
+            RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask("Platform"));
             if (rayHit.collider != null)
             {
                 if (rayHit.distance < 0.5f)
@@ -87,7 +87,7 @@ public class PlayerMove : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.layer == 7)
         {
             //Attack
             if (rigid.velocity.y < 0 && transform.position.y > collision.transform.position.y)

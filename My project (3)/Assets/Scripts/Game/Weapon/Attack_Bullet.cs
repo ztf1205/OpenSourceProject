@@ -18,7 +18,7 @@ public class Attack_Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.layer == 7)
         {
             collision.GetComponent<EnemyMove>().OnDamaged();
             Destroy(this.gameObject);

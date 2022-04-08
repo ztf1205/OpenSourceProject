@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6488205361097351002}
   - component: {fileID: 5799356152956876067}
   - component: {fileID: 2107913016140707958}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SpeedUp
-  m_TagString: Item
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

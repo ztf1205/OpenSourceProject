@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8186342954401595230}
   - component: {fileID: 8186342954401595217}
   - component: {fileID: -66321947019247878}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sliver
-  m_TagString: Item
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
