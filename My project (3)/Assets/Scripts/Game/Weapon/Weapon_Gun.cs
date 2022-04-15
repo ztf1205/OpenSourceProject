@@ -26,22 +26,22 @@ public class Weapon_Gun : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        //½Ã°£À» Àç´Ù°¡ ½ÎÀÌÅ¬ÀÌ µ¹¸é Å¸ÀÌ¸Ó ÃÊ±âÈ­ÇÏ°í ºÒ¸´ ¹ß»çÇÏ¸ç È¿°úÀ½ Àç»ı
+        //ì‹œê°„ì„ ì¬ë‹¤ê°€ ì‹¸ì´í´ì´ ëŒë©´ íƒ€ì´ë¨¸ ì´ˆê¸°í™”í•˜ê³  ë¶ˆë¦¿ ë°œì‚¬í•˜ë©° íš¨ê³¼ìŒ ì¬ìƒ
         if (timer >= attackCycle)
         {
-            //½Ã°£ÃÊ±âÈ­
+            //ì‹œê°„ì´ˆê¸°í™”
             timer = 0f;
 
-            //ºÒ¸´ »ı¼º, À§Ä¡ ÇÒ´ç, È¸Àü
+            //ë¶ˆë¦¿ ìƒì„±, ìœ„ì¹˜ í• ë‹¹, íšŒì „
             GameObject bullet = Instantiate(attack_Bullet);
             bullet.transform.position = this.transform.position;
 
-            //ºÒ¸´ ¸¶¿ì½º ¹æÇâÀ¸·Î È¸Àü
+            //ë¶ˆë¦¿ ë§ˆìš°ìŠ¤ ë°©í–¥ìœ¼ë¡œ íšŒì „
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             bullet.transform.rotation = Quaternion.Euler(0f, 0f,
                 Mathf.Atan2(mousePos.x - this.transform.position.x, mousePos.y - this.transform.position.y) * Mathf.Rad2Deg * -1 + 90);
 
-            //È¿°úÀ½ Àç»ı
+            //íš¨ê³¼ìŒ ì¬ìƒ
             audioSource.Play();
 
         }

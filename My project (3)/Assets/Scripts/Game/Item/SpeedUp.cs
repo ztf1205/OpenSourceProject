@@ -9,7 +9,7 @@ public class SpeedUp : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        //ÇÃ·¹ÀÌ¾î¿Í Ãæµ¹Çß´Ù¸é ÇÃ·¹ÀÌ¾î ÃÖ´ë ÀÌ¼Ó Áõ°¡ ¹× ¾ÆÀÌÅÛ »èÁ¦
+        //í”Œë ˆì´ì–´ì™€ ì¶©ëŒí–ˆë‹¤ë©´ í”Œë ˆì´ì–´ ìµœëŒ€ ì´ì† ì¦ê°€ ë° ì•„ì´í…œ ì‚­ì œ
         if (collision.gameObject.tag == "Player")
         {
             collision.GetComponent<PlayerMove>().maxSpeed += speedUp;

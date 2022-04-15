@@ -8,7 +8,7 @@ public class Teleportation : MonoBehaviour
     public GameObject Player;
     bool Pressed;
 
-    //À­ ¹æÇâÅ° ÀÔ·Â ½Ã (¾ÆÁ÷ ±¸ÇöÀÌ ¾ÈµÊ)
+    //ìœ— ë°©í–¥í‚¤ ì…ë ¥ ì‹œ (ì•„ì§ êµ¬í˜„ì´ ì•ˆë¨)
     private void Update()
     {
         if (Input.GetKey(KeyCode.UpArrow))
@@ -20,20 +20,20 @@ public class Teleportation : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        //Ãæµ¹ÀÚ°¡ ÇÃ·¹ÀÌ¾îÀÌ¸é
+        //ì¶©ëŒìê°€ í”Œë ˆì´ì–´ì´ë©´
         if (collision.gameObject.tag == "Player")
         {
-            //À­¹æÇâÅ°³ª w¸¦ ÀÔ·Â½Ã ¼ø°£ÀÌµ¿
+            //ìœ—ë°©í–¥í‚¤ë‚˜ wë¥¼ ì…ë ¥ì‹œ ìˆœê°„ì´ë™
             //if (Pressed)
            // {
-           //´Ù¸¥ Æ÷Å» À§Ä¡·Î ¼ø°£ÀÌµ¿
+           //ë‹¤ë¥¸ í¬íƒˆ ìœ„ì¹˜ë¡œ ìˆœê°„ì´ë™
                   Player.transform.position = new Vector2(Portal.transform.position.x, Portal.transform.position.y);
            // }
             // StartCoroutine(Teleport());
         }
     }
 
-    // ÀÌ ÇÔ¼ö¸¦ ÀÌ¿ëÇÏ¸é ¼ø°£ÀÌµ¿¿¡ µô·¹ÀÌ¸¦ ÁÙ ¼ö ÀÖÀ½
+    // ì´ í•¨ìˆ˜ë¥¼ ì´ìš©í•˜ë©´ ìˆœê°„ì´ë™ì— ë”œë ˆì´ë¥¼ ì¤„ ìˆ˜ ìˆìŒ
     //IEnumerator Teleport()
     // {
     //     yield return new WaitForSeconds(0);
