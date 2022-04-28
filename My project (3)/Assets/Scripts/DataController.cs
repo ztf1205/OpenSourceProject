@@ -6,18 +6,19 @@ using UnityEngine;
 
 /*<데이터 컨트롤러 현재 기능>
  * 
+ * -데이터 getter로 얻어오기
+ * 
  * -게임 시작할 때 초기화
  * -게임에서 업그레이드 수행
+ * -돈 얻기
+ * -점수 추가
+ * -최고점수 체크 및 자동 갱신
  * 
- * -로비에서 돈이 있으면 업그레이드를 수행
+ * -로비에서 돈 충분하면 업그레이드 수행
  * 
- * -upgradeData.csv에서 업그레이드 정보 수정 가능합니다.(초기값,최대값,업글값,비용)
- * -이후 엑셀로 값 수정하도록 변경할 예정입니다
+ * -upgradeData.csv에서 업그레이드 정보 수정 가능
  * 
  * <추가할 것>
- * -데이터 정보 접근 가능하도록-설정,유저 데이터, 업그레이드 정보 getter 만들기
- * -설정하고 하이스코어, 돈 변경가능하도록
- * 
  * -패치나 버전 정보 넣어서 추가데이터 관리 가능하도록 변경(변경 가능성 있는 부분 명확하게 정하기)
  * 
  * -업그레이드 늘어날수록 비용 증가
@@ -28,16 +29,19 @@ using UnityEngine;
 
 public static class DataController
 {
-
-    //게임 시작할 때 업그레이드 초기화
+    //게임 시작시의 초기화
     public static void GameStartReset()
     {
         int i;
 
+        //업그레이드 초기화
         for (i = 0; i <= Constants.UPGRADE_MAXIDX; i++)
         {
             upgradeData[i].LoadUpgrade();
         }
+
+        //현재 점수 초기화
+        score = 0f;
     }
 
     //게임에서 업그레이드 수행
@@ -52,6 +56,34 @@ public static class DataController
         {
             Debug.Log("유효하지 않은 업그레이드 인덱스입니다.");
             return false;//비정상 종료
+        }
+    }
+
+    //입력하는 돈 만큼 돈 추가하고 저장
+    public static void EarnMoney(float earnMoney)
+    {
+        money += earnMoney;
+        SaveData();
+    }
+
+    public static void AddScore(float addScore)
+    {
+        score += addScore;
+        SaveData();
+    }
+
+    //점수에 따라 하이스코어 체크하고 갱신여부 반환
+    public static bool HighscoreCheck()
+    {
+        if (score > highscore)//기록 갱신
+        {
+            highscore = score;
+            SaveData();
+            return true;
+        }
+        else//기록 미갱신
+        {
+            return false;
         }
     }
 
@@ -81,13 +113,78 @@ public static class DataController
     }
 
 
+
+
     //세팅
     private static float volume_music = 100f;//음악 볼륨
     private static float volume_effect = 100f;//효과음 볼륨
 
     //유저 데이터
+    private static float score = 0f;//현재 점수
     private static float highscore = 0f;//최고 점수
     private static float money = 0f;//돈
+
+
+    //세팅과 유저 데이터 getter
+    public static float GetVolume_music()
+    {
+        return volume_music;
+    }
+    public static float GetVolume_effect()
+    {
+        return volume_effect;
+    }
+    public static float GetScore()
+    {
+        return score;
+    }
+    public static float GetHighscore()
+    {
+        return highscore;
+    }
+    public static float GetMoney()
+    {
+        return money;
+    }
+
+    //업그레이드 getter
+    public static string GetName(int upgradeIndex)
+    {
+        return upgradeData[upgradeIndex].GetName();
+    }
+    public static float GetResetValue(int upgradeIndex)
+    {
+        return upgradeData[upgradeIndex].GetResetValue();
+    }
+    public static float GetGameValue(int upgradeIndex)
+    {
+        return upgradeData[upgradeIndex].GetGameValue();
+    }
+    public static float GetGameMaxValue(int upgradeIndex)
+    {
+        return upgradeData[upgradeIndex].GetGameMaxValue();
+    }
+    public static float GetGameUpgradeValue(int upgradeIndex)
+    {
+        return upgradeData[upgradeIndex].GetGameUpgradeValue();
+    }
+    public static float GetLobbyValue(int upgradeIndex)
+    {
+        return upgradeData[upgradeIndex].GetLobbyValue();
+    }
+    public static float GetLobbyMaxValue(int upgradeIndex)
+    {
+        return upgradeData[upgradeIndex].GetLobbyMaxValue();
+    }
+    public static float GetLobbyUpgradeValue(int upgradeIndex)
+    {
+        return upgradeData[upgradeIndex].GetLobbyUpgradeValue();
+    }
+    public static float GetLobbyUpgradeCost(int upgradeIndex)
+    {
+        return upgradeData[upgradeIndex].GetLobbyUpgradeCost();
+    }
+
 
     //업그레이드
 
@@ -124,7 +221,7 @@ public static class DataController
             LoadUpgrade();//현재값은 저장 데이터 로드
         }
 
-        //각 멤버변수들은 모두 Getter로 접근 가능
+        //Getter
         public string GetName()
         {
             return name;
@@ -207,6 +304,7 @@ public static class DataController
         BuildUpgradeData();
         LoadData();
     }
+
 
     //csv 파일 이용해서 upgradeData 빌드
     private static void BuildUpgradeData()
