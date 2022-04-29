@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &216296292 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 805298690578127169, guid: 12e1e9e45851a504b88b73eda5138f4a, type: 3}
+  m_PrefabInstance: {fileID: 805298690037937775}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &363780145 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4496136844740982876, guid: 5ad1a9a529b63b2409a285eedd571756, type: 3}
@@ -261,6 +266,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1727728862637311685, guid: ab60d1c743868ac4aab37dc8f2239f4b, type: 3}
   m_PrefabInstance: {fileID: 1727728863839901751}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1223827190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223827186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4741b58faa87a2447a47a48cd711bfea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Portal: {fileID: 216296292}
+  Player: {fileID: 1303756882}
 --- !u!1 &1303756882 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5722116396925071277, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
@@ -278,6 +297,7 @@ GameObject:
   - component: {fileID: 1434303407}
   - component: {fileID: 1434303406}
   - component: {fileID: 1434303408}
+  - component: {fileID: 1434303409}
   m_Layer: 6
   m_Name: Tilemap
   m_TagString: Untagged
@@ -1274,11 +1294,30 @@ TilemapCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!251 &1434303409
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434303404}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 90
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1463460543
 GameObject:
   m_ObjectHideFlags: 0
