@@ -12,9 +12,17 @@ PrefabInstance:
       value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: -3226211779106114407, guid: 9d09185953abb04469598d8930cb906c, type: 3}
+      propertyPath: audioGunFire
+      value: 
+      objectReference: {fileID: 8300000, guid: 92590c92437deb84ba7d51d8189cf6fd, type: 3}
+    - target: {fileID: -3226211779106114407, guid: 9d09185953abb04469598d8930cb906c, type: 3}
       propertyPath: attack_Bullet
       value: 
       objectReference: {fileID: 1403122909217846579, guid: 44aeb7d33a950e8458abd299a8525f93, type: 3}
+    - target: {fileID: -2473416070161551623, guid: 9d09185953abb04469598d8930cb906c, type: 3}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7813653098379775042, guid: 9d09185953abb04469598d8930cb906c, type: 3}
       propertyPath: m_Name
       value: Weapon_Gun_AR

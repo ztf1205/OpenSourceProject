@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack_Bullet: {fileID: 846378308589500348, guid: 1344df294feb4c44e88145fabebf5658, type: 3}
-  audioGunFire: {fileID: 8300000, guid: 92590c92437deb84ba7d51d8189cf6fd, type: 3}
+  audioGunFire: {fileID: 8300000, guid: 50f20152b05fb994e9358b0dbaa8cd38, type: 3}
   attackCycle: 0.6
 --- !u!82 &-2473416070161551623
 AudioSource:
@@ -125,7 +125,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.199
-  m_Pitch: 1
+  m_Pitch: 1.6
   Loop: 0
   Mute: 0
   Spatialize: 0
