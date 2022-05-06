@@ -85,7 +85,7 @@ public class EnemyMove : MonoBehaviour
         if (health <= 0)
         {
             //플레이어 경험치 획득
-            player.GetComponent<PlayerMove>().expGain(exp);
+            player.GetComponent<PlayerMove>().expGain(exp + exp * DataController.GetGameValue(Constants.EXPGAIN_IDX));
 
             //Sprite Alpha
             spriteRenderer.color = new Color(1, 1, 1, 0.4f);
