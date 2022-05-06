@@ -9,6 +9,7 @@ public class PlayerMove : MonoBehaviour
 
     private float health = 100f;
     private float healthMax = 100f;
+    private float healthMaxUpgrade;
     private float playerExp = 0f;
     private int level = 1;
 
@@ -26,12 +27,22 @@ public class PlayerMove : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
-        healthMax += DataController.GetGameValue(Constants.HEALTHMAX_IDX);
-        health = healthMax;
+        healthMaxUpgrade = healthMax + healthMax * DataController.GetGameValue(Constants.HEALTHMAX_IDX);
+        health = healthMaxUpgrade;
     }
 
     void Update()
     {
+        //최대 체력 변경 여부 검사
+        if (healthMaxUpgrade < healthMax + healthMax * DataController.GetGameValue(Constants.HEALTHMAX_IDX))//다르다면
+        {
+            //추가된 만큼 회복
+            Heal(healthMax + healthMax * DataController.GetGameValue(Constants.HEALTHMAX_IDX) - healthMaxUpgrade);
+            //갱신
+            healthMaxUpgrade = healthMax + healthMax * DataController.GetGameValue(Constants.HEALTHMAX_IDX);
+        }
+
+
         //Jump
         if (Input.GetButtonDown("Jump") && !anim.GetBool("isJumping"))
         {
