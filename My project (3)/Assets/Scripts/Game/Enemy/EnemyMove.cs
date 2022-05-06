@@ -9,11 +9,13 @@ public class EnemyMove : MonoBehaviour
     private float health = 100f;
     private float enemyDamage = 25f;
 
+    private float exp = 1f;
+
     public float getDamage()
     {
         return enemyDamage;
     }
-
+    GameObject player;
     Rigidbody2D rigid;
     SpriteRenderer spriteRenderer;
     CapsuleCollider2D capsuleCollider;
@@ -25,6 +27,7 @@ public class EnemyMove : MonoBehaviour
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
+        player = GameObject.FindWithTag("Player");
 
         Invoke("Think", 5);
     }
@@ -81,6 +84,9 @@ public class EnemyMove : MonoBehaviour
         //체력이 없다면 사망 판정
         if (health <= 0)
         {
+            //플레이어 경험치 획득
+            player.GetComponent<PlayerMove>().expGain(exp);
+
             //Sprite Alpha
             spriteRenderer.color = new Color(1, 1, 1, 0.4f);
 
