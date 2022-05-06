@@ -13,6 +13,8 @@ public class PlayerMove : MonoBehaviour
     private float playerExp = 0f;
     private int level = 1;
 
+    private float gameTime = 0f;
+
     public GameManager gameManager;
 
 
@@ -33,6 +35,10 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        //시간 갱신
+        gameTime += Time.deltaTime;
+
+
         //최대 체력 변경 여부 검사
         if (healthMaxUpgrade < healthMax + healthMax * DataController.GetGameValue(Constants.HEALTHMAX_IDX))//다르다면
         {
@@ -149,6 +155,12 @@ public class PlayerMove : MonoBehaviour
 
     public void OnDie()
     {
+        //점수 저장
+        DataController.AddScore((int)gameTime);
+
+        //점수 갱신
+        DataController.HighscoreCheck();
+
         //Sprite Alpha
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
 
@@ -160,6 +172,7 @@ public class PlayerMove : MonoBehaviour
 
         //Die Effect Jump
         rigid.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
+
     }
 
     public void Heal(float heal)
