@@ -7,7 +7,7 @@ public class Attack_Bullet : MonoBehaviour
     [SerializeField]
     private float speed = 10f;
     [SerializeField]
-    private int damage = 50;
+    private float bulletDamage = 100f;
 
     // Update is called once per frame
     void Update()
@@ -20,7 +20,7 @@ public class Attack_Bullet : MonoBehaviour
     {
         if (collision.gameObject.layer == 7)
         {
-            collision.GetComponent<EnemyMove>().OnDamaged();
+            collision.GetComponent<EnemyMove>().OnDamaged(bulletDamage);
             Destroy(this.gameObject);
         }
 

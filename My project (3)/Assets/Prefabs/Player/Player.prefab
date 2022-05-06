@@ -240,5 +240,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 5
   jumpPower: 20
-  health: 2
+  health: 100
   gameManager: {fileID: 0}

@@ -6,8 +6,11 @@ public class PlayerMove : MonoBehaviour
 {
     public float maxSpeed;
     public float jumpPower;
-    public int health;
+    [HideInInspector]
+    public float health = 100f;
+
     public GameManager gameManager;
+
 
     CapsuleCollider2D capsuleCollider;
     Rigidbody2D rigid;
@@ -89,38 +92,18 @@ public class PlayerMove : MonoBehaviour
     {
         if (collision.gameObject.layer == 7)
         {
-            //Attack
-            if (rigid.velocity.y < 0 && transform.position.y > collision.transform.position.y)
-            {
-                OnAttack(collision.transform);
-            }
-            // Damaged
-            else
-            {
-                OnDamaged(collision.transform.position);
-            }
+            OnDamaged(collision.transform.position, collision.gameObject.GetComponent<EnemyMove>().getDamage());
         }
     }
 
-    
-
-    void OnAttack(Transform enemy)
-    {
-        // Point
-        gameManager.stagePoint += 100;
-
-        //Reaction Force
-        rigid.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
-
-        //Enemy Die
-        EnemyMove enemyMove = enemy.GetComponent<EnemyMove>();
-        enemyMove.OnDamaged();
-    }
-
-    void OnDamaged(Vector2 targetPos)
+    void OnDamaged(Vector2 targetPos, float enemyDamage)
     {
         // Health Down
-        HealthDown();
+        health -= enemyDamage;
+        if (health <= 0)
+        {
+            OnDie();
+        }
 
         // Change Layer
         gameObject.layer = 9;
@@ -145,15 +128,6 @@ public class PlayerMove : MonoBehaviour
         
         // View Alpha
         spriteRenderer.color = new Color(1, 1, 1, 1);
-    }
-
-    public void HealthDown()
-    {
-        health--;
-        if (health <= 0)
-        {
-            OnDie();
-        }
     }
 
     public void OnDie()

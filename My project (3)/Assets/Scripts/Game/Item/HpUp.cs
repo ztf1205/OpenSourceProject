@@ -5,7 +5,7 @@ using UnityEngine;
 public class HpUp : MonoBehaviour
 {
     [SerializeField]
-    private int hpUp = 1;
+    private float hpUp = 20f;
 
     void OnTriggerEnter2D(Collider2D collision)
     {

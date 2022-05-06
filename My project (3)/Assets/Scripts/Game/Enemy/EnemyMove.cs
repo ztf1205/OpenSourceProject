@@ -6,6 +6,14 @@ public class EnemyMove : MonoBehaviour
 {
     public int nextMove;
 
+    private float health = 100f;
+    private float enemyDamage = 25f;
+
+    public float getDamage()
+    {
+        return enemyDamage;
+    }
+
     Rigidbody2D rigid;
     SpriteRenderer spriteRenderer;
     CapsuleCollider2D capsuleCollider;
@@ -65,22 +73,29 @@ public class EnemyMove : MonoBehaviour
         Invoke("Think", 5);
     }
 
-    public void OnDamaged()
+    public void OnDamaged(float damage)
     {
-        //Sprite Alpha
-        spriteRenderer.color = new Color(1, 1, 1, 0.4f);
+        //체력 감소
+        health -= damage;
 
-        //Sprite Flip Y
-        spriteRenderer.flipY = true;
+        //체력이 없다면 사망 판정
+        if (health <= 0)
+        {
+            //Sprite Alpha
+            spriteRenderer.color = new Color(1, 1, 1, 0.4f);
 
-        //Collider Disable
-        capsuleCollider.enabled = false;
+            //Sprite Flip Y
+            spriteRenderer.flipY = true;
 
-        //Die Effect Jump
-        rigid.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
+            //Collider Disable
+            capsuleCollider.enabled = false;
 
-        //Destroy
-        Invoke("DeActive", 5);
+            //Die Effect Jump
+            rigid.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
+
+            //Destroy
+            Invoke("DeActive", 5);
+        }
     }
 
     void DeActive()
