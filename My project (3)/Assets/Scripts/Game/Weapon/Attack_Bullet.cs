@@ -9,7 +9,11 @@ public class Attack_Bullet : MonoBehaviour
     [SerializeField]
     private float bulletDamage = 100f;
 
-    // Update is called once per frame
+    private void Awake()
+    {
+        bulletDamage += bulletDamage * DataController.GetGameValue(Constants.DAMAGE_IDX);
+    }
+
     void Update()
     {
         transform.Translate(Vector2.right * Time.deltaTime * speed);
