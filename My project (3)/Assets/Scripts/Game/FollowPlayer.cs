@@ -5,6 +5,7 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour
 {
     GameObject player;
+    public float speed = -1f;//음수는 즉시 이동, 0은 정지
 
     void Start()
     {
@@ -15,7 +16,14 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = player.transform.position;
+        if (speed < 0)
+        {
+            transform.position = player.transform.position;
+        }
+        else if (speed > 0)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed);
+        }
 
     }
 }
