@@ -68,7 +68,6 @@ public static class DataController
     //게임에서 랜덤한 업그레이드 수행
     public static bool RandomUpgrade()
     {
-        bool flag = true;//업그레이드 성공 여부 저장
         int[] idxArr = new int[Constants.UPGRADE_MAXIDX + 1];
         int maxIdx = -1;
 
