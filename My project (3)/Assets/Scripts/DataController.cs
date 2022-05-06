@@ -135,9 +135,17 @@ public static class DataController
             float cost = upgradeData[upgradeIndex].GetLobbyUpgradeCost();
             if (cost <= money)//돈이 충분하면 돈 지불하고 업그레이드
             {
-                money -= cost;
-                upgradeData[upgradeIndex].DoLobbyUpgrade();
-                return true;//정상 종료
+                if (upgradeData[upgradeIndex].DoLobbyUpgrade())//업그레이드 성공했다면
+                {
+                    money -= cost;//돈 지불
+                    SaveData();//변경 데이터 저장
+                    return true;//정상 종료
+                }
+                else//이미 풀 업그레이드라면
+                {
+                    Debug.Log("이미 모든 업그레이드를 했습니다.");
+                    return false;//비정상 종료
+                }
             }
             else//돈이 충분하지 않으면 오류처리
             {
