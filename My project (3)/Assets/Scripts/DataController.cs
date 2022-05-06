@@ -14,9 +14,15 @@ using UnityEngine;
  * -점수 추가
  * -최고점수 체크 및 자동 갱신
  * 
+ * -랜덤 업그레이드
+ * 
  * -로비에서 돈 충분하면 업그레이드 수행
  * 
  * -upgradeData.csv에서 업그레이드 정보 수정 가능
+ * 
+ * 
+ * 
+ * 
  * 
  * <추가할 것>
  * -패치나 버전 정보 넣어서 추가데이터 관리 가능하도록 변경(변경 가능성 있는 부분 명확하게 정하기)
@@ -57,6 +63,41 @@ public static class DataController
             Debug.Log("유효하지 않은 업그레이드 인덱스입니다.");
             return false;//비정상 종료
         }
+    }
+
+    //게임에서 랜덤한 업그레이드 수행
+    public static bool RandomUpgrade()
+    {
+        bool flag = true;//업그레이드 성공 여부 저장
+        int[] idxArr = new int[Constants.UPGRADE_MAXIDX + 1];
+        int maxIdx = -1;
+
+        //업그레이드가 가능한 업그레이드 인덱스의 배열 제작
+        for (int i = 0; i <= Constants.UPGRADE_MAXIDX; i++)
+        {
+            if (DataController.upgradeData[i].IsMaxGameUpgrade())
+            {
+                idxArr[++maxIdx] = i;
+            }
+        }
+
+        //풀업이라면 false 반환
+        if (maxIdx == -1)
+        {
+            return false;
+        }
+        else//풀업이 아니라면 업그레이드 진행 후 true 반환
+        {
+            //배열 중에서 랜덤한 원소 뽑아서 해당 인덱스로 업그레이드 진행
+            int randIdx = idxArr[UnityEngine.Random.Range(0, maxIdx)];
+            DataController.upgradeData[randIdx].DoGameUpgrade();
+
+            //true 반환
+            return true;
+        }
+
+
+
     }
 
     //입력하는 돈 만큼 돈 추가하고 저장
@@ -258,6 +299,11 @@ public static class DataController
         {
             return lobbyUpgradeCost;
         }
+
+        public bool IsMaxGameUpgrade()
+        {
+            return gameValue >= gameMaxValue;
+        }
         
         //업그레이드 로드
         public void LoadUpgrade()
@@ -282,16 +328,35 @@ public static class DataController
         }
 
         //게임 업그레이드 수행
-        public void DoGameUpgrade()
+        public bool DoGameUpgrade()
         {
-            gameValue += gameUpgradeValue;
+            //max값보다 작은 상태면 업그레이드 시행하고 시행 여부 반환
+            if (IsMaxGameUpgrade() == false)
+            {
+                gameValue += gameUpgradeValue;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         //로비 업그레이드 수행
-        public void DoLobbyUpgrade()
+        public bool DoLobbyUpgrade()
         {
-            lobbyValue += lobbyUpgradeValue;
-            SaveUpgrade();
+            
+            //max값보다 작은 상태면 업그레이드 시행하고 시행 여부 반환
+            if (lobbyValue < lobbyMaxValue)
+            {
+                lobbyValue += lobbyUpgradeValue;
+                SaveUpgrade();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
     };
