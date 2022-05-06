@@ -9,11 +9,6 @@ public class Attack_Bullet : MonoBehaviour
     [SerializeField]
     private float bulletDamage = 100f;
 
-    private void Awake()
-    {
-        bulletDamage += bulletDamage * DataController.GetGameValue(Constants.DAMAGE_IDX);
-    }
-
     void Update()
     {
         transform.Translate(Vector2.right * Time.deltaTime * speed);
@@ -24,7 +19,7 @@ public class Attack_Bullet : MonoBehaviour
     {
         if (collision.gameObject.layer == 7)
         {
-            collision.GetComponent<EnemyMove>().OnDamaged(bulletDamage);
+            collision.GetComponent<EnemyMove>().OnDamaged(bulletDamage + bulletDamage * DataController.GetGameValue(Constants.DAMAGE_IDX));
             Destroy(this.gameObject);
         }
 

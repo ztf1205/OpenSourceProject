@@ -152,10 +152,11 @@ public class PlayerMove : MonoBehaviour
 
     public void Heal(float heal)
     {
+        float currentHealthMax = healthMax + healthMax * DataController.GetGameValue(Constants.HEALTHMAX_IDX);
         health += heal;
-        if (health > healthMax)
+        if (health > currentHealthMax)
         {
-            health = healthMax;
+            health = currentHealthMax;
         }
     }
 
