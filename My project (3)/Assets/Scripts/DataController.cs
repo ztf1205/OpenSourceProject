@@ -309,8 +309,8 @@ public static class DataController
     //csv 파일 이용해서 upgradeData 빌드
     private static void BuildUpgradeData()
     {
-        upgradeData = new upgrade[Constants.UPGRADE_MAXIDX];
-        StreamReader sr = new StreamReader(Application.dataPath + "/" + "upgradeData.csv");
+        upgradeData = new upgrade[Constants.UPGRADE_MAXIDX + 1];
+        StreamReader sr = new StreamReader(Application.dataPath + "/Data/upgradeData.csv");
 
         string line = sr.ReadLine();//가장 윗줄 버리기
         for (int tmpIdx = 0; tmpIdx <= Constants.UPGRADE_MAXIDX; tmpIdx++)
@@ -323,7 +323,7 @@ public static class DataController
             upgradeData[tmpIdx] = new upgrade(
             int.Parse(data[0]), data[1], float.Parse(data[2]),//인덱스, 이름, 초기값
             float.Parse(data[3]), float.Parse(data[4]),//게임값-최대,업글
-            float.Parse(data[5]), float.Parse(data[6]), float.Parse(data[6]));//로비값-최대,업글,업글비용
+            float.Parse(data[5]), float.Parse(data[6]), float.Parse(data[7]));//로비값-최대,업글,업글비용
         }
 
     }

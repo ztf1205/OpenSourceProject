@@ -6,8 +6,9 @@ public class PlayerMove : MonoBehaviour
 {
     public float maxSpeed;
     public float jumpPower;
-    [HideInInspector]
-    public float health = 100f;
+
+    private float health = 100f;
+    private float healthMax = 100f;
 
     public GameManager gameManager;
 
@@ -23,6 +24,8 @@ public class PlayerMove : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
+        healthMax += DataController.GetGameValue(Constants.HEALTHMAX_IDX);
+        health = healthMax;
     }
 
     void Update()
@@ -143,5 +146,14 @@ public class PlayerMove : MonoBehaviour
 
         //Die Effect Jump
         rigid.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
+    }
+
+    public void Heal(float heal)
+    {
+        health += heal;
+        if (health > healthMax)
+        {
+            health = healthMax;
+        }
     }
 }
