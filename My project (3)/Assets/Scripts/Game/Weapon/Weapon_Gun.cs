@@ -27,7 +27,7 @@ public class Weapon_Gun : MonoBehaviour
         timer += Time.deltaTime;
 
         //시간을 재다가 싸이클이 돌면 타이머 초기화하고 불릿 발사하며 효과음 재생
-        if (timer >= attackCycle)
+        if (timer >= attackCycle - attackCycle * DataController.GetGameValue(Constants.COOLTIME_IDX))
         {
             //시간초기화
             timer = 0f;
