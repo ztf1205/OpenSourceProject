@@ -18,7 +18,7 @@ PrefabInstance:
     - target: {fileID: -3226211779106114407, guid: 9d09185953abb04469598d8930cb906c, type: 3}
       propertyPath: attack_Bullet
       value: 
-      objectReference: {fileID: 5323182804719164159, guid: e6b7be9943bc59848891b1d59e62a807, type: 3}
+      objectReference: {fileID: 6702656945737546215, guid: 8f641035128959a439b1791373e83403, type: 3}
     - target: {fileID: 7813653098379775042, guid: 9d09185953abb04469598d8930cb906c, type: 3}
       propertyPath: m_Name
       value: Weapon_Grenade
