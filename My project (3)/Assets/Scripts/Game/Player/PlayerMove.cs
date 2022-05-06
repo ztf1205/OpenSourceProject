@@ -66,16 +66,17 @@ public class PlayerMove : MonoBehaviour
     {
         //Move By Key Control
         float h = Input.GetAxisRaw("Horizontal");
+        float currentMaxSpeed = maxSpeed + maxSpeed * DataController.GetGameValue(Constants.MOVESPEED_IDX);
 
         rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
 
-        if (rigid.velocity.x > maxSpeed) // Right Max Speed
+        if (rigid.velocity.x > currentMaxSpeed) // Right Max Speed
         {
-            rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);
+            rigid.velocity = new Vector2(currentMaxSpeed, rigid.velocity.y);
         }
-        else if (rigid.velocity.x < maxSpeed * (-1)) // Left Max Speed
+        else if (rigid.velocity.x < currentMaxSpeed * (-1)) // Left Max Speed
         {
-            rigid.velocity = new Vector2(maxSpeed * (-1), rigid.velocity.y);
+            rigid.velocity = new Vector2(currentMaxSpeed * (-1), rigid.velocity.y);
         }
 
         //Landing Platform
