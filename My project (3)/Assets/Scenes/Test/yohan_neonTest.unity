@@ -2672,6 +2672,14 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5722116395945941716, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722116395945941716, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5722116396925071277, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
       propertyPath: m_Name
       value: Player (1)
