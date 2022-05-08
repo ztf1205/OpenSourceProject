@@ -7,7 +7,6 @@ public class Teleportation : MonoBehaviour
     public GameObject Portal;
     public GameObject Player;
     private int P_Flag = 0;
-    bool Pressed;
 
     //윗 방향키 입력 시 (아직 구현이 안됨)
     private void Update()

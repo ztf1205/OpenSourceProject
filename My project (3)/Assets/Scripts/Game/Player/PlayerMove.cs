@@ -12,6 +12,8 @@ public class PlayerMove : MonoBehaviour
     private float healthMaxUpgrade;
     private float playerExp = 0f;
     private int level = 1;
+    public bool isGrounded = false;
+    private int jumpCount = 2;
 
     private float gameTime = 0f;
 
@@ -31,6 +33,7 @@ public class PlayerMove : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         healthMaxUpgrade = healthMax + healthMax * DataController.GetGameValue(Constants.HEALTHMAX_IDX);
         health = healthMaxUpgrade;
+        jumpCount = 0;
     }
 
     void Update()
@@ -50,10 +53,19 @@ public class PlayerMove : MonoBehaviour
 
 
         //Jump
-        if (Input.GetButtonDown("Jump") && !anim.GetBool("isJumping"))
+        if (isGrounded)
         {
-            rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-            anim.SetBool("isJumping", true);
+            if (jumpCount > 0)
+            {
+                if (Input.GetButtonDown("Jump"))
+                {
+                    rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+                    anim.SetBool("isJumping", true);
+                    
+                    jumpCount -= 1;
+                    Debug.Log(jumpCount);
+                }
+            }
         }
         //Stop Speed
         if (Input.GetButtonUp("Horizontal"))
@@ -116,6 +128,12 @@ public class PlayerMove : MonoBehaviour
         if (collision.gameObject.layer == 7)
         {
             OnDamaged(collision.transform.position, collision.gameObject.GetComponent<EnemyMove>().getDamage());
+        }
+
+        if (collision.gameObject.layer == 6)
+        {
+            isGrounded = true;
+            jumpCount = 2;
         }
     }
 
