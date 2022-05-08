@@ -816,38 +816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Portal: {fileID: 216296292}
-  Player: {fileID: 1303756882}
---- !u!1 &1303756882 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5722116396925071277, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
-  m_PrefabInstance: {fileID: 5722116396238660180}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &1303756889
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1303756882}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.75, y: 0.9}
-  m_EdgeRadius: 0
+  Player: {fileID: 0}
 --- !u!1 &1434303404
 GameObject:
   m_ObjectHideFlags: 0
@@ -2440,7 +2409,7 @@ PrefabInstance:
     - target: {fileID: 805298690578127168, guid: 12e1e9e45851a504b88b73eda5138f4a, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 1303756882}
+      objectReference: {fileID: 0}
     - target: {fileID: 805298690578127168, guid: 12e1e9e45851a504b88b73eda5138f4a, type: 3}
       propertyPath: Portal
       value: 
@@ -2734,6 +2703,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4932008190449559216, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932008190449559216, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.97
+      objectReference: {fileID: 0}
     - target: {fileID: 5722116396925071275, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
       propertyPath: gameManager
       value: 
