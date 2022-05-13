@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 3612242}
   - component: {fileID: 3612241}
   m_Layer: 3
-  m_Name: Post-process Volume
+  m_Name: PP Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2156,8 +2156,8 @@ Canvas:
   m_GameObject: {fileID: 221438685}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
-  m_Camera: {fileID: 1171277463}
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -2286,7 +2286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: Lobby2
-  Player: {fileID: 1250605480}
+  Player: {fileID: 0}
 --- !u!61 &223399251
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2325,7 +2325,7 @@ GameObject:
   - component: {fileID: 427256303}
   - component: {fileID: 427256302}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2477,7 +2477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 636ed8069bb32a743ace4140151707ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unit: {fileID: 1250605481}
+  unit: {fileID: 1459893927}
 --- !u!212 &543965493
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2853,6 +2853,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4932008190449559216, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932008190449559216, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932008190449559216, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5722116395945941547, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
       propertyPath: m_TargetDisplay
       value: 0
@@ -2911,14 +2923,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
---- !u!1 &831838920 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5722116395945941544, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
+--- !u!4 &831838920 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7462124827856668750, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
   m_PrefabInstance: {fileID: 831838919}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &831838921 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5722116395945941716, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
+--- !u!1 &831838921 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5936895683401690249, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
   m_PrefabInstance: {fileID: 831838919}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &831838922
@@ -2927,13 +2939,13 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 831838920}
+  m_GameObject: {fileID: 831838921}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 831838921}
+  volumeTrigger: {fileID: 831838920}
   volumeLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -3117,7 +3129,7 @@ GameObject:
   - component: {fileID: 1082084254}
   - component: {fileID: 1082084253}
   m_Layer: 5
-  m_Name: Text
+  m_Name: StatUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3206,11 +3218,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082084251}
   m_CullTransparentMesh: 1
---- !u!20 &1171277463 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 5722116395945941547, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
-  m_PrefabInstance: {fileID: 831838919}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1229372852
 GameObject:
   m_ObjectHideFlags: 0
@@ -3414,56 +3421,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeIdx: 0
---- !u!1 &1250605480 stripped
+--- !u!1 &1459893920 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 5722116396925071277, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
+  m_CorrespondingSourceObject: {fileID: 394762429191869965, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
   m_PrefabInstance: {fileID: 831838919}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1250605481
+--- !u!50 &1459893923 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1601623768184946229, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
+  m_PrefabInstance: {fileID: 831838919}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1459893927
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1250605480}
+  m_GameObject: {fileID: 1459893920}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9fe161b4c99da9c41b4cfb6687224a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rigidbody: {fileID: 1250605482}
+  Rigidbody: {fileID: 1459893923}
   speed: 10
---- !u!50 &1250605482 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 5722116396925071272, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
-  m_PrefabInstance: {fileID: 831838919}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &1250605487
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1250605480}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1775703366
 GameObject:
   m_ObjectHideFlags: 0
@@ -3729,7 +3710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: Lobby2
-  Player: {fileID: 1250605480}
+  Player: {fileID: 0}
 --- !u!61 &1964051844
 BoxCollider2D:
   m_ObjectHideFlags: 0
