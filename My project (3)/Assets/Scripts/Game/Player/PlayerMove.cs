@@ -166,7 +166,7 @@ public class PlayerMove : MonoBehaviour
         gameObject.layer = 8;
         
         // View Alpha
-        spriteRenderer.color = new Color(1, 1, 1, 1);
+        spriteRenderer.color = new Color((133 / 255.0f), (217 / 255.0f), 1.0f, 1.0f);
     }
 
     public void OnDie()
