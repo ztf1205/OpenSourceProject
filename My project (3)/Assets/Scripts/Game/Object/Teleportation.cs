@@ -5,7 +5,7 @@ using UnityEngine;
 public class Teleportation : MonoBehaviour
 {
     public GameObject Portal;
-    public GameObject Player;
+    GameObject Player;
     private int P_Flag = 0;
 
     //윗 방향키 입력 시 (아직 구현이 안됨)
@@ -20,6 +20,12 @@ public class Teleportation : MonoBehaviour
                 StartCoroutine(Teleport());
             }
         }
+    }
+
+    void Start()
+    {
+        Player = GameObject.FindWithTag("Player");
+
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -44,6 +50,6 @@ public class Teleportation : MonoBehaviour
     IEnumerator Teleport()
      {
         yield return new WaitForSeconds(0.2f);
-        Player.transform.position = new Vector2(Portal.transform.position.x, Portal.transform.position.y);
+        Player.transform.position = new Vector2(Portal.transform.position.x, Portal.transform.position.y - GetComponent<BoxCollider2D>().size.y + Player.GetComponent<CapsuleCollider2D>().size.y / 2);
     }
 }
