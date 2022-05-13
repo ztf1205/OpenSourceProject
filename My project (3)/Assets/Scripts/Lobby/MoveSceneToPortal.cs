@@ -12,7 +12,7 @@ public class MoveSceneToPortal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetAxisRaw("Vertical") == 1)
         {
             // 윗 방향키 입력시 Scene 이동
             if (Flag == 1)
@@ -31,7 +31,7 @@ public class MoveSceneToPortal : MonoBehaviour
     }
     /*public void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetAxisRaw("Vertical") == 1)
         {
             // 윗 방향키 입력시 Scene 이동
             if (Flag == 1)

@@ -11,7 +11,7 @@ public class Teleportation : MonoBehaviour
     //윗 방향키 입력 시 (아직 구현이 안됨)
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if ((Input.GetAxisRaw("Vertical") == 1))
         {
             //윗방향키나 w를 입력시 순간이동
             if (P_Flag == 1)

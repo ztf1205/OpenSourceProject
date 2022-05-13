@@ -10,7 +10,7 @@ public class UpgradePlatform : MonoBehaviour
 
     private void Update()
     {
-        if (isbool == true && Input.GetKeyDown(KeyCode.UpArrow))
+        if (isbool == true && Input.GetAxisRaw("Vertical") == 1)
         {
             DataController.LobbyUpgrade(upgradeIdx);
             Debug.Log("업그레이드 완료");
@@ -30,7 +30,7 @@ public class UpgradePlatform : MonoBehaviour
     /*private void OnTriggerStay2D(Collider2D collision)
     {
         //플레이어와 닿아있는 상태에서 윗방향키 누르면 업그레이드 구매 시도
-        if (isbool == true && Input.GetKeyDown(KeyCode.UpArrow))
+        if (isbool == true && Input.GetAxisRaw("Vertical") == 1)
         {
             DataController.LobbyUpgrade(upgradeIdx);
             Debug.Log("업그레이드 완료");
@@ -46,7 +46,7 @@ public class UpgradePlatform : MonoBehaviour
     /*void OnCollision2D(Collision2D collision)
     {
         //플레이어와 닿아있는 상태에서 윗방향키 누르면 업그레이드 구매 시도
-        if (collision.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.UpArrow))
+        if (collision.gameObject.CompareTag("Player") && Input.GetAxisRaw("Vertical") == 1)
         {
             DataController.LobbyUpgrade(upgradeIdx);
             Debug.Log("업그레이드 완료");
