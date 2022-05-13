@@ -15,7 +15,7 @@ public class MoveSceneToPortal : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             // 윗 방향키 입력시 Scene 이동
-            if(Flag == 1)
+            if (Flag == 1)
             {
                 SceneManager.LoadScene(nextScene);
             }
@@ -29,7 +29,17 @@ public class MoveSceneToPortal : MonoBehaviour
             Flag = 1;
         }
     }
-
+    /*public void OnTriggerStay2D(Collider2D collision)
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            // 윗 방향키 입력시 Scene 이동
+            if (Flag == 1)
+            {
+                SceneManager.LoadScene(nextScene);
+            }
+        }
+    }*/
     public void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
