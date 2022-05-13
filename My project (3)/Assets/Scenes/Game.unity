@@ -816,7 +816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Portal: {fileID: 216296292}
-  Player: {fileID: 0}
+  Player: {fileID: 5722116396238660181}
 --- !u!1 &1434303404
 GameObject:
   m_ObjectHideFlags: 0
@@ -2409,7 +2409,7 @@ PrefabInstance:
     - target: {fileID: 805298690578127168, guid: 12e1e9e45851a504b88b73eda5138f4a, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5722116396238660181}
     - target: {fileID: 805298690578127168, guid: 12e1e9e45851a504b88b73eda5138f4a, type: 3}
       propertyPath: Portal
       value: 
@@ -2532,6 +2532,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7140524911691894640, guid: ab60d1c743868ac4aab37dc8f2239f4b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1727728862637311682, guid: ab60d1c743868ac4aab37dc8f2239f4b, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -2580,7 +2584,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -7140524911691894640, guid: ab60d1c743868ac4aab37dc8f2239f4b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ab60d1c743868ac4aab37dc8f2239f4b, type: 3}
 --- !u!1001 &4496136844969910381
 PrefabInstance:
@@ -2765,6 +2770,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
+--- !u!1 &5722116396238660181 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 394762429191869965, guid: e0de1c19e7dc1834e99d55836c9ae3bc, type: 3}
+  m_PrefabInstance: {fileID: 5722116396238660180}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9118737511999043184
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1727728862637311682}
+  - component: {fileID: 5831827264538915933}
   - component: {fileID: 1727728862637311683}
   - component: {fileID: 1727728862637311684}
   - component: {fileID: -7140524911691894640}
@@ -19,7 +19,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1727728862637311682
+--- !u!4 &5831827264538915933
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,4 +123,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Portal: {fileID: 0}
-  Player: {fileID: 0}

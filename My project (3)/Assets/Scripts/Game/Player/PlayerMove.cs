@@ -12,7 +12,6 @@ public class PlayerMove : MonoBehaviour
     private float healthMaxUpgrade;
     private float playerExp = 0f;
     private int level = 1;
-    public bool isGrounded = false;
     private int jumpCount = 2;
 
     private float gameTime = 0f;
@@ -53,18 +52,17 @@ public class PlayerMove : MonoBehaviour
 
 
         //Jump
-        if (isGrounded)
-        {
-            if (jumpCount > 0)
+
+        if (jumpCount > 0)
             {
-                if (Input.GetButtonDown("Jump"))
-                {
-                    rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-                    anim.SetBool("isJumping", true);
+            if (Input.GetButtonDown("Jump"))
+            {
+                rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+                anim.SetBool("isJumping", true);
                     
-                    jumpCount -= 1;
-                    Debug.Log(jumpCount);
-                }
+                jumpCount -= 1;
+                
+                Debug.Log(jumpCount);
             }
         }
         //Stop Speed
@@ -117,6 +115,7 @@ public class PlayerMove : MonoBehaviour
             {
                 if (rayHit.distance < 0.5f)
                 {
+                    jumpCount = 2;
                     anim.SetBool("isJumping", false);
                 }
             }
@@ -132,8 +131,7 @@ public class PlayerMove : MonoBehaviour
 
         if (collision.gameObject.layer == 6)
         {
-            isGrounded = true;
-            jumpCount = 2;
+
         }
     }
 
