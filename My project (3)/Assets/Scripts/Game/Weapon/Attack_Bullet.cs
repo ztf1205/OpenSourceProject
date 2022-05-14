@@ -17,7 +17,7 @@ public class Attack_Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 7)
+        if (collision.gameObject.layer == 7 || collision.gameObject.layer == 12)
         {
             collision.GetComponent<EnemyMove>().OnDamaged(bulletDamage + bulletDamage * DataController.GetGameValue(Constants.DAMAGE_IDX));
             Destroy(this.gameObject);

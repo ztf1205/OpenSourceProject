@@ -124,14 +124,9 @@ public class PlayerMove : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 7)
+        if (collision.gameObject.layer == 7 || collision.gameObject.layer == 12)
         {
             OnDamaged(collision.transform.position, collision.gameObject.GetComponent<EnemyMove>().getDamage());
-        }
-
-        if (collision.gameObject.layer == 6)
-        {
-
         }
     }
 
@@ -164,7 +159,6 @@ public class PlayerMove : MonoBehaviour
     {
         // Change Layer
         gameObject.layer = 8;
-        
         // View Alpha
         spriteRenderer.color = new Color((133 / 255.0f), (217 / 255.0f), 1.0f, 1.0f);
     }
