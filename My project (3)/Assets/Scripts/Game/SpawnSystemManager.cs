@@ -5,7 +5,7 @@ using UnityEngine;
 /* 공중 몹에 대한 스폰시스템 제작하기
  * 일반양과 주기, 엘리트양 저장
  * 제작하면 주기적으로 랜덤한 위치에 생성하도록 만들기
- * (플레이어 주변의 사각틀 영역)
+ * (오브젝트 주변의 사각틀 영역)
  * 
  * 퍼블릭으로는 스폰시스템 추가하는 것만 만들기
  * 
@@ -22,18 +22,13 @@ public class SpawnSystemManager : MonoBehaviour
     }
 
 
-    public GameObject enemyNormal;
-    public GameObject enemyElite;
+    public GameObject enemyAir;
 
-
-    private GameObject player;
     private List<SpawnSystem> spawnSystems;
     private int maxIdx = -1;
 
-    [SerializeField]
-    private float width = 5f;//사각틀의 폭
-    [SerializeField]
-    private float offset = 5f;//사각틀의 중점으로부터의 오프셋
+    private float width = 78f;//스폰지역 너비
+    private float height = 38f;//스폰지역 높이
 
 
     private class SpawnSystem
@@ -54,10 +49,10 @@ public class SpawnSystemManager : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.FindWithTag("Player");
         spawnSystems = new List<SpawnSystem>();
-        addSpawnSystem(1, 1, 0.1f);
+        addSpawnSystem(1, 1, 1f);
     }
+
     private void Update()
     {
         for (int idx = 0; idx <= maxIdx; idx++)
@@ -73,64 +68,22 @@ public class SpawnSystemManager : MonoBehaviour
 
     private void Spawn(int normalSpawn, int eliteSpawn)
     {
-        int dir;//상하좌우 방향 설정을 위한 변수
-        float centerX = player.transform.position.x;
-        float centerY = player.transform.position.y;
-
-
         //노말 스폰
         for (int i = 0; i < normalSpawn; i++)
         {
-            dir = Random.Range(0, 8);
-            GameObject enemy = Instantiate(enemyNormal);
-            if (dir == 0)//하
-            {
-                enemy.transform.position = new Vector2(Random.Range(centerX - width - offset, centerX + width + offset),
-                    Random.Range(centerY - offset, centerY - width - offset));
-            }
-            else if (dir % 3 == 0)//상
-            {
-                enemy.transform.position = new Vector2(Random.Range(centerX - offset, centerX + offset),
-                    Random.Range(centerY + width + offset, centerY + offset));
-            }
-            else if (dir % 3 == 1)//좌
-            {
-                enemy.transform.position = new Vector2(Random.Range(centerX - width - offset, centerX - offset),
-                    Random.Range(centerY + width + offset, centerY - offset));
-            }
-            else if (dir % 3 == 2)//우
-            {
-                enemy.transform.position = new Vector2(Random.Range(centerX + offset, centerX + width + offset),
-                    Random.Range(centerY + width + offset, centerY - offset));
-            }
+            GameObject enemy = Instantiate(enemyAir);
+            enemy.transform.position = new Vector2(Random.Range(transform.position.x - width / 2, transform.position.x + width / 2),
+                    Random.Range(transform.position.y - height / 2, transform.position.y + height / 2));
 
         }
 
         //엘리트 스폰
         for (int i = 0; i < eliteSpawn; i++)
         {
-            dir = Random.Range(0, 8);
-            GameObject enemy = Instantiate(enemyElite);
-            if (dir == 0)//하
-            {
-                enemy.transform.position = new Vector2(Random.Range(centerX - width - offset, centerX + width + offset),
-                    Random.Range(centerY - offset, centerY - width - offset));
-            }
-            else if (dir % 3 == 0)//상
-            {
-                enemy.transform.position = new Vector2(Random.Range(centerX - offset, centerX + offset),
-                    Random.Range(centerY + width + offset, centerY + offset));
-            }
-            else if (dir % 3 == 1)//좌
-            {
-                enemy.transform.position = new Vector2(Random.Range(centerX - width - offset, centerX - offset),
-                    Random.Range(centerY + width + offset, centerY - offset));
-            }
-            else if (dir % 3 == 2)//우
-            {
-                enemy.transform.position = new Vector2(Random.Range(centerX + offset, centerX + width + offset),
-                    Random.Range(centerY + width + offset, centerY - offset));
-            }
+            GameObject enemy = Instantiate(enemyAir);
+            enemy.transform.position = new Vector2(Random.Range(transform.position.x - width / 2, transform.position.x + width / 2),
+                    Random.Range(transform.position.y - height / 2, transform.position.y + height / 2));
+            enemy.GetComponent<EnemyMove>().isElite = true;
         }
     }
 }

@@ -6,17 +6,17 @@ public class EnemyMove : MonoBehaviour
 {
     public GameObject treasure;
     public GameObject heal;
+    public bool isElite = false;
 
     public int nextMove;
 
-    private float dropChance_treasure = 0.01f;
+    private float dropChance_treasure = 0.0f;
     private float dropChance_heal = 0.05f;
 
     private float health = 100f;
     private float enemyDamage = 25f;
-
     private float exp = 1f;
-    private float money = 10f;
+    private float money = 1f;
 
     public float getDamage()
     {
@@ -39,7 +39,25 @@ public class EnemyMove : MonoBehaviour
         Invoke("Think", 5);
     }
 
-    
+    private void Start()
+    {
+        if (isElite)
+        {
+            dropChance_treasure = 0.2f;
+            dropChance_heal = 0.0f;
+
+            health = 500f;
+            enemyDamage = 50f;
+            exp = 5f;
+            money = 5f;
+
+            GetComponent<FollowPlayer>().speed *= 0.7f;
+            transform.localScale = new Vector3(2f, 2f, 1f);
+            spriteRenderer.color = new Color(1f, 0f, 1f, 1f);
+        }
+    }
+
+
     void FixedUpdate()
     {
         //Move
