@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
+    public GameObject treasure;
+    public GameObject heal;
+
     public int nextMove;
+
+    private float dropChance_treasure = 0.01f;
+    private float dropChance_heal = 0.05f;
 
     private float health = 100f;
     private float enemyDamage = 25f;
@@ -90,6 +96,18 @@ public class EnemyMove : MonoBehaviour
 
             //돈 획득
             DataController.EarnMoney(money);
+
+            //보물상자 드랍
+            if (Random.Range(0, 100) <= dropChance_treasure*100)
+            {
+                Instantiate(treasure, transform.position, Quaternion.identity);
+            }
+
+            //회복 아이템 드랍
+            if (Random.Range(0, 100) <= dropChance_heal * 100)
+            {
+                Instantiate(heal, transform.position, Quaternion.identity);
+            }
 
             //Sprite Alpha
             spriteRenderer.color = new Color(1, 1, 1, 0.4f);
