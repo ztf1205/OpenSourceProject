@@ -200,33 +200,33 @@ public class PlayerMove : MonoBehaviour
         playerExp += exp;
         if (level < 1)
         {
-            levelUpCheck(3f);
+            TrylevelUp(5f);
         }
         else if (level < 5)
         {
-            levelUpCheck(5f);
+            TrylevelUp(10f);
         }
         else if (level < 10)
         {
-            levelUpCheck(8f);
+            TrylevelUp(20f);
         }
         else if (level < 15)
         {
-            levelUpCheck(10f);
+            TrylevelUp(35f);
         }
         else if (level < 20)
         {
-            levelUpCheck(12f);
+            TrylevelUp(50f);
         }
         else
         {
-            levelUpCheck(15f);
+            TrylevelUp(80f);
         }
     }
 
-    private bool levelUpCheck(float levelUpExp)
+    private void TrylevelUp(float levelUpExp)
     {
-        if (playerExp >= levelUpExp)
+        while (playerExp >= levelUpExp)
         {
             playerExp -= levelUpExp;
             level++;
@@ -234,11 +234,6 @@ public class PlayerMove : MonoBehaviour
             {
                 Heal(20f);
             }
-            return true;
-        }
-        else
-        {
-            return false;
         }
     }
 }
