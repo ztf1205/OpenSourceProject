@@ -30,6 +30,7 @@ public class SpawnSystemManager : MonoBehaviour
     private float width = 78f;//스폰지역 너비
     private float height = 38f;//스폰지역 높이
 
+    private float GameTimer = 0f;//게임 시간 저장
 
     private class SpawnSystem
     {
@@ -50,11 +51,15 @@ public class SpawnSystemManager : MonoBehaviour
     private void Awake()
     {
         spawnSystems = new List<SpawnSystem>();
-        addSpawnSystem(1, 1, 1f);
     }
 
     private void Update()
     {
+        //시간 갱신
+        GameTimer += Time.deltaTime;
+        //시간에 따라서 스폰 추가
+        SpawnTimeLine();
+        //생성된 스폰시스템에 따라서 스폰
         for (int idx = 0; idx <= maxIdx; idx++)
         {
             spawnSystems[idx].timer += Time.deltaTime;
@@ -84,6 +89,22 @@ public class SpawnSystemManager : MonoBehaviour
             enemy.transform.position = new Vector2(Random.Range(transform.position.x - width / 2, transform.position.x + width / 2),
                     Random.Range(transform.position.y - height / 2, transform.position.y + height / 2));
             enemy.GetComponent<EnemyMove>().isElite = true;
+        }
+    }
+
+    private void SpawnTimeLine()
+    {
+        if (GameTimer > 0 && maxIdx == -1)
+        {
+            addSpawnSystem(4, 0, 4f);
+        }
+        else if (GameTimer > 10 && maxIdx == 0)
+        {
+            addSpawnSystem(2, 1, 5f);
+        }
+        else if (GameTimer > 20 && maxIdx == 1)
+        {
+            addSpawnSystem(6, 1, 6f);
         }
     }
 }
