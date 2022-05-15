@@ -197,7 +197,6 @@ public class PlayerMove : MonoBehaviour
 
     public void expGain(float exp)
     {
-        levelUpCheck(1f);
         playerExp += exp;
         if (level < 1)
         {

@@ -74,7 +74,7 @@ public static class DataController
         //업그레이드가 가능한 업그레이드 인덱스의 배열 제작
         for (int i = 0; i <= Constants.UPGRADE_MAXIDX; i++)
         {
-            if (DataController.upgradeData[i].IsMaxGameUpgrade())
+            if (upgradeData[i].IsMaxGameUpgrade() == false)
             {
                 idxArr[++maxIdx] = i;
             }
@@ -89,7 +89,7 @@ public static class DataController
         {
             //배열 중에서 랜덤한 원소 뽑아서 해당 인덱스로 업그레이드 진행
             int randIdx = idxArr[UnityEngine.Random.Range(0, maxIdx)];
-            DataController.upgradeData[randIdx].DoGameUpgrade();
+            upgradeData[randIdx].DoGameUpgrade();
 
             //true 반환
             return true;
