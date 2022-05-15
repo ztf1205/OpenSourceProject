@@ -106,5 +106,28 @@ public class SpawnSystemManager : MonoBehaviour
         {
             addSpawnSystem(6, 1, 6f);
         }
+        else if (GameTimer > 25 && maxIdx == 2)
+        {
+            addSpawnSystem(2, 0, 2f);
+        }
+        else if (GameTimer > 30 && maxIdx == 3)
+        {
+            addSpawnSystem(4, 1, 3f);
+        }
+        else if (GameTimer > 50 && maxIdx == 3)
+        {
+            addSpawnSystem(4, 0, 1f);
+            addSpawnSystem(0, 1, 5f);
+        }
+        else if (GameTimer > 80 && maxIdx == 3)
+        {
+            addSpawnSystem(3, 1, 3f);
+            addSpawnSystem(2, 0, 1f);
+            addSpawnSystem(0, 1, 2f);
+        }
+        else if (GameTimer > 120 && maxIdx == 3)
+        {
+            addSpawnSystem(6, 1, 1f);
+        }
     }
 }
