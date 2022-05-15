@@ -18,6 +18,9 @@ public class EnemyMove : MonoBehaviour
     private float exp = 1f;
     private float money = 1f;
 
+    private bool deathFlag = false;
+    private float deathTimer = 0f;
+
     public float getDamage()
     {
         return enemyDamage;
@@ -36,7 +39,7 @@ public class EnemyMove : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         player = GameObject.FindWithTag("Player");
 
-        Invoke("Think", 5);
+        Invoke("Think", 5f);
     }
 
     private void Start()
@@ -73,6 +76,19 @@ public class EnemyMove : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (deathFlag)
+        {
+            deathTimer += Time.deltaTime;
+            spriteRenderer.color = new Color(1, 1, 1, 0.4f-deathTimer/2);
+        }
+        if (deathTimer > 0.8f)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
     void Think()
     {
         //Set Next Active
@@ -98,7 +114,7 @@ public class EnemyMove : MonoBehaviour
         spriteRenderer.flipX = nextMove == 1;
 
         CancelInvoke();
-        Invoke("Think", 5);
+        Invoke("Think", 1f);
     }
 
     public void OnDamaged(float damage)
@@ -107,8 +123,11 @@ public class EnemyMove : MonoBehaviour
         health -= damage;
 
         //체력이 없다면 사망 판정
-        if (health <= 0)
+        if (health <= 0 && deathFlag == false)
         {
+            //플래그 변경
+            deathFlag = true;
+
             //플레이어 경험치 획득
             player.GetComponent<PlayerMove>().expGain(exp + exp * DataController.GetGameValue(Constants.EXPGAIN_IDX));
 
@@ -126,6 +145,12 @@ public class EnemyMove : MonoBehaviour
             {
                 Instantiate(heal, transform.position, Quaternion.identity);
             }
+            //플레이어 추적 중지
+            FollowPlayer followPlayer;
+            if (TryGetComponent<FollowPlayer>(out followPlayer))
+            {
+                GetComponent<FollowPlayer>().speed = 0f;
+            }
 
             //Sprite Alpha
             spriteRenderer.color = new Color(1, 1, 1, 0.4f);
@@ -138,14 +163,6 @@ public class EnemyMove : MonoBehaviour
 
             //Die Effect Jump
             rigid.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
-
-            //Destroy
-            Invoke("DeActive", 5);
         }
-    }
-
-    void DeActive()
-    {
-        gameObject.SetActive(false);
     }
 }
