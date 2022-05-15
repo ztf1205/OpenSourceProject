@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3226211779106114407, guid: 9d09185953abb04469598d8930cb906c, type: 3}
       propertyPath: attackCycle
-      value: 0.85
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: -3226211779106114407, guid: 9d09185953abb04469598d8930cb906c, type: 3}
       propertyPath: audioGunFire

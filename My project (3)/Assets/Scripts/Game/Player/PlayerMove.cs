@@ -197,30 +197,31 @@ public class PlayerMove : MonoBehaviour
 
     public void expGain(float exp)
     {
+        levelUpCheck(1f);
         playerExp += exp;
         if (level < 1)
         {
-            levelUpCheck(5f);
-        }
-        else if (level < 3)
-        {
-            levelUpCheck(10f);
+            levelUpCheck(3f);
         }
         else if (level < 5)
         {
-            levelUpCheck(15f);
+            levelUpCheck(5f);
         }
         else if (level < 10)
         {
-            levelUpCheck(20f);
+            levelUpCheck(8f);
         }
         else if (level < 15)
         {
-            levelUpCheck(25f);
+            levelUpCheck(10f);
+        }
+        else if (level < 20)
+        {
+            levelUpCheck(12f);
         }
         else
         {
-            levelUpCheck(30f);
+            levelUpCheck(15f);
         }
     }
 

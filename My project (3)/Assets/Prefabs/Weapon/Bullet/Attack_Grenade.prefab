@@ -83,6 +83,14 @@ PrefabInstance:
       propertyPath: damage
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 6243414813998690190, guid: 1344df294feb4c44e88145fabebf5658, type: 3}
+      propertyPath: isPierce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243414813998690190, guid: 1344df294feb4c44e88145fabebf5658, type: 3}
+      propertyPath: bulletDamage
+      value: 450
+      objectReference: {fileID: 0}
     - target: {fileID: 8746891913162161072, guid: 1344df294feb4c44e88145fabebf5658, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 1
