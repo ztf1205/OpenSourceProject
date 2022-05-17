@@ -23,7 +23,7 @@ public class Attack_Bullet : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if (collision.gameObject.tag == "Wall")
+        if (collision.gameObject.layer == 12)
         {
             Destroy(this.gameObject);
 
