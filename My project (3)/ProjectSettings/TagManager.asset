@@ -17,8 +17,8 @@ TagManager:
   - PlayerDamaged
   - Attack
   - Item
+  - EnemyAir
   - BaseGround
-  - 
   - 
   - 
   - 

@@ -27,6 +27,11 @@ public class Attack_Bullet : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
+
+        if (collision.gameObject.layer == 13)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
 }
