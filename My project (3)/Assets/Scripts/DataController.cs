@@ -74,7 +74,7 @@ public static class DataController
         //업그레이드가 가능한 업그레이드 인덱스의 배열 제작
         for (int i = 0; i <= Constants.UPGRADE_MAXIDX; i++)
         {
-            if (DataController.upgradeData[i].IsMaxGameUpgrade())
+            if (upgradeData[i].IsMaxGameUpgrade() == false)
             {
                 idxArr[++maxIdx] = i;
             }
@@ -89,7 +89,7 @@ public static class DataController
         {
             //배열 중에서 랜덤한 원소 뽑아서 해당 인덱스로 업그레이드 진행
             int randIdx = idxArr[UnityEngine.Random.Range(0, maxIdx)];
-            DataController.upgradeData[randIdx].DoGameUpgrade();
+            upgradeData[randIdx].DoGameUpgrade();
 
             //true 반환
             return true;
@@ -246,6 +246,8 @@ public static class DataController
         private float gameMaxValue;//게임 최대값
         private float gameUpgradeValue;//게임 업글값
 
+        private float totalMaxValue;//게임과 로비를 합친 최대값
+
         private float lobbyValue;//로비 현재값
         private float lobbyMaxValue;//로비 최대값
         private float lobbyUpgradeValue;//로비 업글값
@@ -309,7 +311,7 @@ public static class DataController
 
         public bool IsMaxGameUpgrade()
         {
-            return gameValue >= gameMaxValue;
+            return gameValue >= totalMaxValue;
         }
         
         //업그레이드 로드
@@ -325,6 +327,7 @@ public static class DataController
                 SaveUpgrade();//저장
             }
             gameValue = lobbyValue;//게임값을 로비값으로 초기화
+            totalMaxValue = gameValue + gameMaxValue;//최대값 초기화
 
         }
 

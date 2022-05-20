@@ -154,4 +154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e1fc784f64bb441917a15ca3f1113a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  treasure: {fileID: 8404186234673829007, guid: 6994984bffcc92b4fb76c6c5afa4cffb, type: 3}
+  heal: {fileID: 1286515351362171630, guid: 6f0ab259b40bb0140ab31c207f1d6134, type: 3}
   nextMove: 0

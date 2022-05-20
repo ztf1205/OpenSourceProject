@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a2338a08b363944eb3f0f8a264fcb1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: -1
 --- !u!114 &-3226211779106114407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attack_Bullet: {fileID: 846378308589500348, guid: 1344df294feb4c44e88145fabebf5658, type: 3}
   audioGunFire: {fileID: 8300000, guid: 50f20152b05fb994e9358b0dbaa8cd38, type: 3}
-  attackCycle: 0.6
+  attackCycle: 1.5
 --- !u!82 &-2473416070161551623
 AudioSource:
   m_ObjectHideFlags: 0

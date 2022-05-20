@@ -5,7 +5,7 @@ using UnityEngine;
 /* 공중 몹에 대한 스폰시스템 제작하기
  * 일반양과 주기, 엘리트양 저장
  * 제작하면 주기적으로 랜덤한 위치에 생성하도록 만들기
- * (플레이어 주변의 사각틀 영역)
+ * (오브젝트 주변의 사각틀 영역)
  * 
  * 퍼블릭으로는 스폰시스템 추가하는 것만 만들기
  * 
@@ -22,19 +22,17 @@ public class SpawnSystemManager : MonoBehaviour
     }
 
 
-    public GameObject enemyNormal;
-    public GameObject enemyElite;
+    public GameObject enemyAir;
 
-
-    private GameObject player;
     private List<SpawnSystem> spawnSystems;
     private int maxIdx = -1;
 
-    [SerializeField]
-    private float width = 5f;//사각틀의 폭
-    [SerializeField]
-    private float offset = 5f;//사각틀의 중점으로부터의 오프셋
+    private float width = 78f;//스폰지역 너비
+    private float height = 38f;//스폰지역 높이
 
+    private float GameTimer = 0f;//게임 시간 저장
+    private float NormalCycleTimer = 0f;//노말 추가 싸이클 타이머
+    private float EliteCycleTimer = 0f;//노말 추가 싸이클 타이머
 
     private class SpawnSystem
     {
@@ -54,12 +52,18 @@ public class SpawnSystemManager : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.FindWithTag("Player");
         spawnSystems = new List<SpawnSystem>();
-        addSpawnSystem(1, 1, 0.1f);
     }
+
     private void Update()
     {
+        //시간 갱신
+        GameTimer += Time.deltaTime;
+        NormalCycleTimer += Time.deltaTime;
+        EliteCycleTimer += Time.deltaTime;
+        //시간에 따라서 스폰 추가
+        SpawnTimeLine();
+        //생성된 스폰시스템에 따라서 스폰
         for (int idx = 0; idx <= maxIdx; idx++)
         {
             spawnSystems[idx].timer += Time.deltaTime;
@@ -73,64 +77,77 @@ public class SpawnSystemManager : MonoBehaviour
 
     private void Spawn(int normalSpawn, int eliteSpawn)
     {
-        int dir;//상하좌우 방향 설정을 위한 변수
-        float centerX = player.transform.position.x;
-        float centerY = player.transform.position.y;
-
-
         //노말 스폰
         for (int i = 0; i < normalSpawn; i++)
         {
-            dir = Random.Range(0, 8);
-            GameObject enemy = Instantiate(enemyNormal);
-            if (dir == 0)//하
-            {
-                enemy.transform.position = new Vector2(Random.Range(centerX - width - offset, centerX + width + offset),
-                    Random.Range(centerY - offset, centerY - width - offset));
-            }
-            else if (dir % 3 == 0)//상
-            {
-                enemy.transform.position = new Vector2(Random.Range(centerX - offset, centerX + offset),
-                    Random.Range(centerY + width + offset, centerY + offset));
-            }
-            else if (dir % 3 == 1)//좌
-            {
-                enemy.transform.position = new Vector2(Random.Range(centerX - width - offset, centerX - offset),
-                    Random.Range(centerY + width + offset, centerY - offset));
-            }
-            else if (dir % 3 == 2)//우
-            {
-                enemy.transform.position = new Vector2(Random.Range(centerX + offset, centerX + width + offset),
-                    Random.Range(centerY + width + offset, centerY - offset));
-            }
+            GameObject enemy = Instantiate(enemyAir);
+            enemy.transform.position = new Vector2(Random.Range(transform.position.x - width / 2, transform.position.x + width / 2),
+                    Random.Range(transform.position.y - height / 2, transform.position.y + height / 2));
 
         }
 
         //엘리트 스폰
         for (int i = 0; i < eliteSpawn; i++)
         {
-            dir = Random.Range(0, 8);
-            GameObject enemy = Instantiate(enemyElite);
-            if (dir == 0)//하
-            {
-                enemy.transform.position = new Vector2(Random.Range(centerX - width - offset, centerX + width + offset),
-                    Random.Range(centerY - offset, centerY - width - offset));
-            }
-            else if (dir % 3 == 0)//상
-            {
-                enemy.transform.position = new Vector2(Random.Range(centerX - offset, centerX + offset),
-                    Random.Range(centerY + width + offset, centerY + offset));
-            }
-            else if (dir % 3 == 1)//좌
-            {
-                enemy.transform.position = new Vector2(Random.Range(centerX - width - offset, centerX - offset),
-                    Random.Range(centerY + width + offset, centerY - offset));
-            }
-            else if (dir % 3 == 2)//우
-            {
-                enemy.transform.position = new Vector2(Random.Range(centerX + offset, centerX + width + offset),
-                    Random.Range(centerY + width + offset, centerY - offset));
-            }
+            GameObject enemy = Instantiate(enemyAir);
+            enemy.transform.position = new Vector2(Random.Range(transform.position.x - width / 2, transform.position.x + width / 2),
+                    Random.Range(transform.position.y - height / 2, transform.position.y + height / 2));
+            enemy.GetComponent<EnemyMove>().isElite = true;
+        }
+    }
+
+    private void SpawnTimeLine()
+    {
+        //노말 싸이클
+        if (NormalCycleTimer > 10)
+        {
+            addSpawnSystem(2, 0, 4f);
+            NormalCycleTimer = 0;
+        }
+
+        //엘리트 싸이클
+        if (EliteCycleTimer > 15)
+        {
+            addSpawnSystem(0, 1, 5f);
+            EliteCycleTimer = 0;
+        }
+
+
+        //타임라인
+        if (GameTimer > 0 && maxIdx == -1)
+        {
+            addSpawnSystem(4, 0, 4f);
+        }
+        else if (GameTimer > 20 && maxIdx == 0)
+        {
+            addSpawnSystem(2, 1, 5f);
+        }
+        else if (GameTimer > 40 && maxIdx == 1)
+        {
+            addSpawnSystem(6, 1, 6f);
+        }
+        else if (GameTimer > 60 && maxIdx == 2)
+        {
+            addSpawnSystem(2, 0, 2f);
+        }
+        else if (GameTimer > 80 && maxIdx == 3)
+        {
+            addSpawnSystem(4, 1, 3f);
+        }
+        else if (GameTimer > 100 && maxIdx == 4)
+        {
+            addSpawnSystem(4, 0, 1f);
+            addSpawnSystem(0, 1, 5f);
+        }
+        else if (GameTimer > 120 && maxIdx == 5)
+        {
+            addSpawnSystem(3, 1, 3f);
+            addSpawnSystem(2, 0, 1f);
+            addSpawnSystem(0, 1, 2f);
+        }
+        else if (GameTimer > 140 && maxIdx == 6)
+        {
+            addSpawnSystem(6, 1, 1f);
         }
     }
 }

@@ -55,13 +55,17 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4570395728995351907, guid: 0b160ee54da27f44e829b7784a3f7f43, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4570395728995351908, guid: 0b160ee54da27f44e829b7784a3f7f43, type: 3}
       propertyPath: m_Name
       value: EnemyAir
       objectReference: {fileID: 0}
     - target: {fileID: 4570395728995351908, guid: 0b160ee54da27f44e829b7784a3f7f43, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b160ee54da27f44e829b7784a3f7f43, type: 3}

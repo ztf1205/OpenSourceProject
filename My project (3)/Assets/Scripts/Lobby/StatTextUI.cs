@@ -5,11 +5,11 @@ using UnityEngine.UI;
 public class StatTextUI : MonoBehaviour
 {
     Text stat;
-    public static int scoreValue;
-    // Start is called before the first frame update
+    //public static int scoreValue;
     void Start()
     {
         stat = GetComponent<Text>();
+        // 디버그용 임시 초기화
         PlayerPrefs.DeleteAll();
     }
 

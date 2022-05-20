@@ -7,14 +7,14 @@ public class PlayerMove : MonoBehaviour
     public float maxSpeed;
     public float jumpPower;
 
-    private float health = 100f;
+    private static float health = 100f;
     private float healthMax = 100f;
     private float healthMaxUpgrade;
-    private float playerExp = 0f;
-    private int level = 1;
+    private static float playerExp = 0f;
+    private static int level = 1;
     private int jumpCount = 2;
 
-    private float gameTime = 0f;
+    private static float gameTime = 0f;
 
     public GameManager gameManager;
 
@@ -134,14 +134,9 @@ public class PlayerMove : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 7)
+        if (collision.gameObject.layer == 7 || collision.gameObject.layer == 12)
         {
             OnDamaged(collision.transform.position, collision.gameObject.GetComponent<EnemyMove>().getDamage());
-        }
-
-        if (collision.gameObject.layer == 6)
-        {
-
         }
     }
 
@@ -174,7 +169,6 @@ public class PlayerMove : MonoBehaviour
     {
         // Change Layer
         gameObject.layer = 8;
-        
         // View Alpha
         spriteRenderer.color = new Color((133 / 255.0f), (217 / 255.0f), 1.0f, 1.0f);
     }
@@ -216,33 +210,33 @@ public class PlayerMove : MonoBehaviour
         playerExp += exp;
         if (level < 1)
         {
-            levelUpCheck(5f);
-        }
-        else if (level < 3)
-        {
-            levelUpCheck(10f);
+            TrylevelUp(5f);
         }
         else if (level < 5)
         {
-            levelUpCheck(15f);
+            TrylevelUp(10f);
         }
         else if (level < 10)
         {
-            levelUpCheck(20f);
+            TrylevelUp(20f);
         }
         else if (level < 15)
         {
-            levelUpCheck(25f);
+            TrylevelUp(35f);
+        }
+        else if (level < 20)
+        {
+            TrylevelUp(50f);
         }
         else
         {
-            levelUpCheck(30f);
+            TrylevelUp(80f);
         }
     }
 
-    private bool levelUpCheck(float levelUpExp)
+    private void TrylevelUp(float levelUpExp)
     {
-        if (playerExp >= levelUpExp)
+        while (playerExp >= levelUpExp)
         {
             playerExp -= levelUpExp;
             level++;
@@ -250,11 +244,22 @@ public class PlayerMove : MonoBehaviour
             {
                 Heal(20f);
             }
-            return true;
         }
-        else
-        {
-            return false;
-        }
+    }
+    public static float GetHealthPoint()
+    {
+        return health;
+    }
+    public static int GetPlayerLevel()
+    {
+        return level;
+    }
+    public static float GetPlayerExp()
+    {
+        return playerExp;
+    }
+    public static float GetGameTime()
+    {
+        return gameTime;
     }
 }
