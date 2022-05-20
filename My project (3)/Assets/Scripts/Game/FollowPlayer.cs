@@ -16,14 +16,17 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (speed < 0)
+        if (GameManager.GameIsPaused == false)
         {
-            transform.position = player.transform.position;
-        }
-        else if (speed > 0)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed);
-        }
+            if (speed < 0)
+            {
+                transform.position = player.transform.position;
+            }
+            else if (speed > 0)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed);
+            }
 
+        }
     }
 }

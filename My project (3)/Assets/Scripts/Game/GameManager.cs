@@ -4,18 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int totalPoint;
-    public int stagePoint;
-    public int stageIndex;
 
-    public void NextStage()
-    {
-        stageIndex++;
-        
-        totalPoint += stagePoint;
-        stagePoint = 0;
-    }
+    public static bool GameIsPaused = false;
 
-    
+
 
 }
