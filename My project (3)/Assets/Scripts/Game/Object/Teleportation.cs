@@ -49,7 +49,7 @@ public class Teleportation : MonoBehaviour
     // 이 함수를 이용하면 순간이동에 딜레이를 줄 수 있음
     IEnumerator Teleport()
      {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.6f);
         Player.transform.position = new Vector2(Portal.transform.position.x, Portal.transform.position.y - GetComponent<BoxCollider2D>().size.y + Player.GetComponent<CapsuleCollider2D>().size.y / 2);
     }
 }

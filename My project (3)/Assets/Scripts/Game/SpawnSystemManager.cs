@@ -15,6 +15,8 @@ using UnityEngine;
 
 public class SpawnSystemManager : MonoBehaviour
 {
+
+    private int timeStat = -1;
     public void addSpawnSystem(int normalSpawn, int eliteSpawn, float spawnCycle)
     {
         maxIdx++;
@@ -99,55 +101,63 @@ public class SpawnSystemManager : MonoBehaviour
     private void SpawnTimeLine()
     {
         //노말 싸이클
-        if (NormalCycleTimer > 10)
+        if (NormalCycleTimer > 15)
         {
-            addSpawnSystem(2, 0, 4f);
+            addSpawnSystem(2, 0, 5f);
             NormalCycleTimer = 0;
         }
 
         //엘리트 싸이클
-        if (EliteCycleTimer > 15)
+        if (EliteCycleTimer > 20)
         {
-            addSpawnSystem(0, 1, 5f);
+            addSpawnSystem(0, 1, 7f);
             EliteCycleTimer = 0;
         }
 
 
         //타임라인
-        if (GameTimer > 0 && maxIdx == -1)
+        if (GameTimer > 0 && timeStat == -1)
         {
             addSpawnSystem(4, 0, 4f);
+            timeStat++;
         }
-        else if (GameTimer > 20 && maxIdx == 0)
+        else if (GameTimer > 20 && timeStat == 0)
         {
             addSpawnSystem(2, 1, 5f);
+            timeStat++;
         }
-        else if (GameTimer > 40 && maxIdx == 1)
+        else if (GameTimer > 40 && timeStat == 1)
         {
             addSpawnSystem(6, 1, 6f);
+            timeStat++;
         }
-        else if (GameTimer > 60 && maxIdx == 2)
+        else if (GameTimer > 60 && timeStat == 2)
         {
             addSpawnSystem(2, 0, 2f);
+            timeStat++;
         }
-        else if (GameTimer > 80 && maxIdx == 3)
+        else if (GameTimer > 80 && timeStat == 3)
         {
             addSpawnSystem(4, 1, 3f);
+            timeStat++;
         }
-        else if (GameTimer > 100 && maxIdx == 4)
+        else if (GameTimer > 100 && timeStat == 4)
         {
-            addSpawnSystem(4, 0, 1f);
+            addSpawnSystem(4, 0, 3f);
             addSpawnSystem(0, 1, 5f);
+            timeStat++;
         }
-        else if (GameTimer > 120 && maxIdx == 5)
+        else if (GameTimer > 120 && timeStat == 5)
         {
             addSpawnSystem(3, 1, 3f);
             addSpawnSystem(2, 0, 1f);
             addSpawnSystem(0, 1, 2f);
+            timeStat++;
         }
-        else if (GameTimer > 140 && maxIdx == 6)
+        else if (GameTimer > 140 && timeStat == 6)
         {
             addSpawnSystem(6, 1, 1f);
+            timeStat++;
         }
     }
 }
