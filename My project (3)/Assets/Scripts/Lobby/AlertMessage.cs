@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+// TextMeshPro ver.
 public class AlertMessage : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI alertText;

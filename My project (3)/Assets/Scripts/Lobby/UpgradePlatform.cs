@@ -12,8 +12,8 @@ public class UpgradePlatform : MonoBehaviour
     {
         if (isbool == true && Input.GetAxisRaw("Vertical") == 1)
         {
-            DataController.LobbyUpgrade(upgradeIdx);
-            Debug.Log("업그레이드 완료");
+            StartCoroutine(corou());
+            
         }
     }
     public string getUpgradeName()
@@ -52,4 +52,9 @@ public class UpgradePlatform : MonoBehaviour
             Debug.Log("업그레이드 완료");
         }
     }*/
+    IEnumerator corou()
+    {
+        yield return new WaitForSeconds(0.6f);
+        DataController.LobbyUpgrade(upgradeIdx);
+    }
 }
