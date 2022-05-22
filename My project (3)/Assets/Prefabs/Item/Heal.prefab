@@ -124,6 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpUp: 1
+  healText: {fileID: 5354888408770851525, guid: 82ace2f42eb66d941b4586ed904e8b45, type: 3}
+  hudPos: {fileID: 1286515351362171619}
 --- !u!114 &4557263169513650290
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,6 +17,6 @@ public class StatTextUI : MonoBehaviour
     void Update()
     {
         stat.text = "ExpGain : " + DataController.GetLobbyValue(0) + "\nDamage : " + DataController.GetLobbyValue(1) + "\nMoveSpeed : " + DataController.GetLobbyValue(2)
-            + "\nCoolTime : " + DataController.GetLobbyValue(3) + "\nProjectileSize : " + DataController.GetLobbyValue(4) + "\nHealthMax : " + DataController.GetLobbyValue(5);
+            + "\nCoolTime : " + DataController.GetLobbyValue(3) + "\nProjectileSize : " + DataController.GetLobbyValue(4) + "\nMaxHealth : " + DataController.GetLobbyValue(5);
     }
 }

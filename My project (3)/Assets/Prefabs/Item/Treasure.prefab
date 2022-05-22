@@ -123,6 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b54e4e0adc87b6c44b6d7a56f79e6695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UpgradeText: {fileID: 6212733772242430834, guid: b6f92cec3afce5840966f71f28ed9e45, type: 3}
+  hudPos: {fileID: 1187604710953975811}
 --- !u!114 &2010978842317308673
 MonoBehaviour:
   m_ObjectHideFlags: 0
