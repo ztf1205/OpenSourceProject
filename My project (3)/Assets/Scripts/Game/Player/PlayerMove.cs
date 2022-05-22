@@ -16,7 +16,6 @@ public class PlayerMove : MonoBehaviour
 
     private static float gameTime = 0f;
 
-    public GameManager gameManager;
 
 
     CapsuleCollider2D capsuleCollider;
@@ -147,6 +146,7 @@ public class PlayerMove : MonoBehaviour
         if (health <= 0)
         {
             OnDie();
+            GameManager.gameIsOver = true;
         }
 
         // Change Layer
@@ -192,6 +192,9 @@ public class PlayerMove : MonoBehaviour
 
         //Die Effect Jump
         rigid.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
+
+
+
 
     }
 
