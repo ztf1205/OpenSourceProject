@@ -21,9 +21,12 @@ public class UpgradePlatform : MonoBehaviour
             {
                 Txt.text = "Upgrade Success !!";
             }
+            else if(DataController.GetLobbyUpgradeCost(upgradeIdx) > DataController.GetMoney()){
+                Txt.text = "Not Enough Money..";
+            }
             else
             {
-                Txt.text = "Upgrade Fail..";
+                Txt.text = "!!! Is Maximum Level !!!";
             }
             tri = false;
             Invoke("triggerOn", 1);

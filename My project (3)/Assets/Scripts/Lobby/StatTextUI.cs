@@ -16,8 +16,8 @@ public class StatTextUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        stat.text = "ExpGain : " + DataController.GetLobbyValue(0) + "\nDamage : " + DataController.GetLobbyValue(1) + "\nMoveSpeed : " + DataController.GetLobbyValue(2)
-            + "\nCoolTime : " + DataController.GetLobbyValue(3) + "\nProjectileSize : " + DataController.GetLobbyValue(4) + "\nMaxHealth : " + DataController.GetLobbyValue(5)
-            + "\nMoney : " + DataController.GetMoney().ToString();
+        stat.text = "ExpGain : +" + DataController.GetLobbyValue(0) + "\nDamage : +" + DataController.GetLobbyValue(1) + "\nMoveSpeed : +" + DataController.GetLobbyValue(2)
+            + "\nCoolTime : +" + DataController.GetLobbyValue(3) + "\nProjectileSize : +" + DataController.GetLobbyValue(4) + "\nMaxHealth : +" + DataController.GetLobbyValue(5)
+            + "\n\n<color=green>Money</color> : " + DataController.GetMoney().ToString();
     }
 }
