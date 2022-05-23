@@ -10,6 +10,6 @@ public class LobbyInfo : MonoBehaviour
     {
         info = GetComponent<Text>();
         info.text = "BestRecord = " + DataController.GetHighscore().ToString() + "Seconds"
-            + "\nMoney : " + DataController.GetMoney().ToString();
+            + "\n<color=green>Money</color> : " + DataController.GetMoney().ToString();
     }
 }
