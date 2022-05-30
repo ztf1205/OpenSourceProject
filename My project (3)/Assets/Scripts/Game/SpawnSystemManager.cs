@@ -35,6 +35,8 @@ public class SpawnSystemManager : MonoBehaviour
     private float GameTimer = 0f;//게임 시간 저장
     private float NormalCycleTimer = 0f;//노말 추가 싸이클 타이머
     private float EliteCycleTimer = 0f;//노말 추가 싸이클 타이머
+    private float WaitingTimer = 0f; // 스폰시 대기 시간
+
 
     private class SpawnSystem
     {
@@ -63,6 +65,7 @@ public class SpawnSystemManager : MonoBehaviour
         GameTimer += Time.deltaTime;
         NormalCycleTimer += Time.deltaTime;
         EliteCycleTimer += Time.deltaTime;
+        WaitingTimer += Time.deltaTime;
         //시간에 따라서 스폰 추가
         SpawnTimeLine();
         //생성된 스폰시스템에 따라서 스폰
