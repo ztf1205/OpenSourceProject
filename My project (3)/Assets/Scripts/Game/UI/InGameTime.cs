@@ -17,6 +17,6 @@ public class InGameTime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Time.text = "Time : " + string.Format("{0:N1}", player.GetComponent<PlayerMove>().GetGameTime()) + "Sec";
+        Time.text = "Time : " + string.Format("{0:N1}", player.GetComponent<PlayerMove>().GetGameTime()) + " Sec";
     }
 }
