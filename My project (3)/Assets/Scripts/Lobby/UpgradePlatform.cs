@@ -9,6 +9,15 @@ public class UpgradePlatform : MonoBehaviour
     private bool isbool;
     private bool tri;
     public Text Txt;
+
+    AudioSource audioSource;
+    public AudioClip StepOnSound;
+
+    private void Awake()
+    {
+        audioSource = this.gameObject.GetComponent<AudioSource>();
+    }
+
     void triggerOn()
     {
         tri = true;
@@ -19,6 +28,7 @@ public class UpgradePlatform : MonoBehaviour
         {
             if(DataController.LobbyUpgrade(upgradeIdx) == true)
             {
+                this.audioSource.Play();
                 Txt.text = "Upgrade Success !!";
             }
             else if(DataController.GetLobbyUpgradeCost(upgradeIdx) > DataController.GetMoney()){

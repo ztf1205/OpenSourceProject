@@ -6489,6 +6489,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 194896229571087672, guid: 4a34f7bfd532b094f9014855bfd7fe3a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 64bdfc4b746a3944fa93186a00bab4dc, type: 3}
     - target: {fileID: 9118737512843603792, guid: 4a34f7bfd532b094f9014855bfd7fe3a, type: 3}
       propertyPath: m_Name
       value: JumpPad (6)
