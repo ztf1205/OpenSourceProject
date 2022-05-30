@@ -10,11 +10,11 @@ public class PlayerMove : MonoBehaviour
     private static float health = 100f;
     private float healthMax = 100f;
     private float healthMaxUpgrade;
-    private static float playerExp = 0f;
-    private static int level = 1;
+    private float playerExp = 0f;
+    private int level = 1;
     private int jumpCount = 2;
 
-    private static float gameTime = 0f;
+    private float gameTime = 0f;
 
 
 
@@ -253,15 +253,15 @@ public class PlayerMove : MonoBehaviour
     {
         return health;
     }
-    public static int GetPlayerLevel()
+    public int GetPlayerLevel()
     {
         return level;
     }
-    public static float GetPlayerExp()
+    public float GetPlayerExp()
     {
         return playerExp;
     }
-    public static float GetGameTime()
+    public float GetGameTime()
     {
         return gameTime;
     }
