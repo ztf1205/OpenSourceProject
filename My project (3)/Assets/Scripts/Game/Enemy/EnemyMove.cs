@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*땅에 있는 적의 움직임, 상태를 표시하는 스크립트*/
 public class EnemyMove : MonoBehaviour
 {
     public GameObject treasure;
@@ -13,14 +14,15 @@ public class EnemyMove : MonoBehaviour
     private float dropChance_treasure = 0.0f;
     private float dropChance_heal = 0.05f;
 
-    private float health = 100f;
-    private float enemyDamage = 25f;
-    private float exp = 1f;
-    private float money = 1f;
+    private float health = 100f;        //적 체력
+    private float enemyDamage = 25f;    //적의 공격력
+    private float exp = 1f;             //처지 시, 주는 경험치
+    private float money = 1f;           //처지 시, 주는 돈
 
-    private bool deathFlag = false;
-    private float deathTimer = 0f;
+    private bool deathFlag = false;     //죽었는지 체크하는 변수
+    private float deathTimer = 0f; 
 
+    //데미지 받을시
     public float getDamage()
     {
         return enemyDamage;
@@ -39,7 +41,7 @@ public class EnemyMove : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         player = GameObject.FindWithTag("Player");
 
-        Invoke("Think", 5f);
+        Invoke("Think", 5f);        //딜레이 시간 5초
     }
 
     private void Start()
@@ -63,10 +65,10 @@ public class EnemyMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        //Move
+        //움직임
         rigid.velocity = new Vector2(nextMove, rigid.velocity.y);
 
-        //Platform Check
+        //땅인지 공중인지 체크
         Vector2 frontVec = new Vector2(rigid.position.x + nextMove * 0.2f, rigid.position.y);
         Debug.DrawRay(frontVec, Vector3.down, new Color(0, 1, 0));
         RaycastHit2D rayHit = Physics2D.Raycast(frontVec, Vector3.down, 1, LayerMask.GetMask("Flatform"));
@@ -91,10 +93,10 @@ public class EnemyMove : MonoBehaviour
 
     void Think()
     {
-        //Set Next Active
+        //다음 움직임을 생각하는 함수
         nextMove = Random.Range(-1, 2);
 
-        //Sprite Animation
+        //애니메이션
         anim.SetInteger("WalkSpeed", nextMove);
 
         //Flip Sprite
@@ -152,16 +154,16 @@ public class EnemyMove : MonoBehaviour
                 GetComponent<FollowPlayer>().speed = 0f;
             }
 
-            //Sprite Alpha
+            //알파값을 조정하여 데미지 받은 것을 시각적 표현
             spriteRenderer.color = new Color(1, 1, 1, 0.4f);
 
             //Sprite Flip Y
             spriteRenderer.flipY = true;
 
-            //Collider Disable
+            //충돌조건 삭제
             capsuleCollider.enabled = false;
 
-            //Die Effect Jump
+            //죽었을 때 점프하며 죽음
             rigid.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
         }
     }

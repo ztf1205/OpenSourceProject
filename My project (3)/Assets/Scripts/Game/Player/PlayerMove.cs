@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*플레이어 캐릭터의 모든 이동조건, 상태를 표시하는 스크립트*/
 public class PlayerMove : MonoBehaviour
 {
     public float maxSpeed;
@@ -65,7 +66,7 @@ public class PlayerMove : MonoBehaviour
                 Debug.Log(jumpCount);
             }
         }
-        //Stop Speed
+        //캐릭터가 멈춰있으면
         if (Input.GetButtonUp("Horizontal"))
         {
             rigid.velocity = new Vector2(rigid.velocity.normalized.x * 0.5f, rigid.velocity.y);
@@ -77,7 +78,7 @@ public class PlayerMove : MonoBehaviour
             spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
         }
 
-        //Animation
+        //애니메이션
         if (Mathf.Abs(rigid.velocity.x) < 0.3)
         {
             anim.SetBool("isWalking", false);
@@ -91,22 +92,22 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //Move By Key Control
+        //a, d로 입력 시 이동
         float h = Input.GetAxisRaw("Horizontal");
         float currentMaxSpeed = maxSpeed + maxSpeed * DataController.GetGameValue(Constants.MOVESPEED_IDX);
 
         rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
 
-        if (rigid.velocity.x > currentMaxSpeed) // Right Max Speed
+        if (rigid.velocity.x > currentMaxSpeed) // 오른쪽 이동속도 최대치 조정
         {
             rigid.velocity = new Vector2(currentMaxSpeed, rigid.velocity.y);
         }
-        else if (rigid.velocity.x < currentMaxSpeed * (-1)) // Left Max Speed
+        else if (rigid.velocity.x < currentMaxSpeed * (-1)) // 왼쪽 이동속도 최대치 조정
         {
             rigid.velocity = new Vector2(currentMaxSpeed * (-1), rigid.velocity.y);
         }
 
-        //Landing Platform
+        //땅에 닿을 시 착지 하는 함수
         if (rigid.velocity.y < 0)
         {
             Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
@@ -132,6 +133,7 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+    //몬스터와 충돌시 반응 함수
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 7 || collision.gameObject.layer == 12)
@@ -140,9 +142,10 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+    //데미지 계산
     void OnDamaged(Vector2 targetPos, float enemyDamage)
     {
-        // Health Down
+        // 체력 감소
         health -= enemyDamage;
         if (health <= 0)
         {
@@ -150,30 +153,33 @@ public class PlayerMove : MonoBehaviour
             GameManager.gameIsOver = true;
         }
 
-        // Change Layer
+        // 레이어 변경을 통해 무적시간 적용
         gameObject.layer = 9;
 
-        // View Alpha
+        // 알파 값을 조정하여 무적시간 시각적 표현
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
 
         // Reaction Force
         int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
         rigid.AddForce(new Vector2(dirc, 1) * 7, ForceMode2D.Impulse);
 
-        // Animation
+        // 데미지 입을 시 애니메이션
         anim.SetTrigger("doDamaged");
 
+        //무적시간 적용
         Invoke("OffDamaged", 1);
     }
 
+    //무적시간 끝날 때
     void OffDamaged()
     {
-        // Change Layer
+        // 레이어 변경을 통해 무적시간 종료
         gameObject.layer = 8;
-        // View Alpha
+        // 알파값을 조정하여 캐릭터 무적시간 시각적 적용
         spriteRenderer.color = new Color((133 / 255.0f), (217 / 255.0f), 1.0f, 1.0f);
     }
 
+    //플레이어가 게임오버 될 조건 함수
     public void OnDie()
     {
         //점수 저장
@@ -182,16 +188,16 @@ public class PlayerMove : MonoBehaviour
         //점수 갱신
         DataController.HighscoreCheck();
 
-        //Sprite Alpha
+        //색의 알파값을 조정해 시각적으로 죽음 표시
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
 
         //Sprite Flip Y
         spriteRenderer.flipY = true;
 
-        //Collider Disable
+        //충돌 조건 종료
         capsuleCollider.enabled = false;
 
-        //Die Effect Jump
+        //죽을 때 이펙트
         rigid.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
 
 
