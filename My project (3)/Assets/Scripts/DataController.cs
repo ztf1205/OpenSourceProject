@@ -88,7 +88,7 @@ public static class DataController
         else//풀업이 아니라면 업그레이드 진행 후 true 반환
         {
             //배열 중에서 랜덤한 원소 뽑아서 해당 인덱스로 업그레이드 진행
-            int randIdx = idxArr[UnityEngine.Random.Range(0, maxIdx)];
+            int randIdx = idxArr[UnityEngine.Random.Range(0, maxIdx + 1)];
             upgradeData[randIdx].DoGameUpgrade();
 
             //true 반환
