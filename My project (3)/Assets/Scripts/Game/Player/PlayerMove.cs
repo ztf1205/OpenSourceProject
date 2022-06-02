@@ -15,7 +15,8 @@ public class PlayerMove : MonoBehaviour
     private int jumpCount = 2;
 
     private float gameTime = 0f;
-
+    public GameObject levelUpText;
+    public Transform hudPos;
 
 
     CapsuleCollider2D capsuleCollider;
@@ -243,6 +244,9 @@ public class PlayerMove : MonoBehaviour
         {
             playerExp -= levelUpExp;
             level++;
+            // 레벨업 텍스트 출력
+            GameObject ltext = Instantiate(levelUpText);
+            ltext.transform.position = hudPos.position;
             if (DataController.RandomUpgrade() == false)
             {
                 Heal(20f);

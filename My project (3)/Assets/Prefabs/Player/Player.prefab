@@ -157,7 +157,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 5
   jumpPower: 20
-  gameManager: {fileID: 0}
+  levelUpText: {fileID: 3682236230290084135, guid: 74c8c3043ec8aa447b9987aea615c275, type: 3}
+  hudPos: {fileID: 4932008190449559216}
 --- !u!1 &5936895683401690249
 GameObject:
   m_ObjectHideFlags: 0
