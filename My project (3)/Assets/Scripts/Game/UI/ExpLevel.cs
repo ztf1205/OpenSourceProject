@@ -6,15 +6,12 @@ public class ExpLevel : MonoBehaviour
 {
     Text ExpLv;
     GameObject player;
-    // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
         ExpLv = GetComponent<Text>();
     }
-
-    // Update is called once per frame
-    void Update()
+    void Update() // Player Level, Exp UI
     {
         ExpLv.text = "Player Level = " + player.GetComponent<PlayerMove>().GetPlayerLevel() + "\nExp : " + player.GetComponent<PlayerMove>().GetPlayerExp();
     }

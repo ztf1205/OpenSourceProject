@@ -10,11 +10,7 @@ public class AlertMessage : MonoBehaviour
     {
         alertText.gameObject.SetActive(false);
     }
-
-    void Update()
-    {
-        
-    }
+    // Player가 충돌 시 Message표시
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals("Player"))

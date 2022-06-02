@@ -22,24 +22,24 @@ public class UpgradePlatform : MonoBehaviour
     {
         tri = true;
     }
-    private void Update()
+    private void Update() // Log UI
     {
         if (tri == true && isbool == true && Input.GetAxisRaw("Vertical") == 1)
         {
-            if(DataController.LobbyUpgrade(upgradeIdx) == true)
+            if(DataController.LobbyUpgrade(upgradeIdx) == true) // Upgrade 성공(true) 시
             {
                 this.audioSource.Play();
                 Txt.text = "Upgrade Success !!";
             }
-            else if(DataController.GetLobbyUpgradeCost(upgradeIdx) > DataController.GetMoney()){
+            else if(DataController.GetLobbyUpgradeCost(upgradeIdx) > DataController.GetMoney()){ // 게임머니 부족할 시
                 Txt.text = "Not Enough Money..";
             }
-            else
+            else // Upgrade 불가능
             {
                 Txt.text = "!!! Is Maximum Level !!!";
             }
             tri = false;
-            Invoke("triggerOn", 1);
+            Invoke("triggerOn", 1); // delay
         }
     }
     public string getUpgradeName()

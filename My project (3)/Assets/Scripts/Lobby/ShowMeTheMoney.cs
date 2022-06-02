@@ -5,19 +5,20 @@ using UnityEngine;
 public class ShowMeTheMoney : MonoBehaviour
 {
     [SerializeField] private float amount;
-    private bool isbool;
-    private bool tri;
+    private bool isbool; // Player와의 충돌검사를 위한 boolean
+    private bool tri; // delay를 주기위한 trigger
     void triggerOn()
     {
         tri = true;
     }
     private void Update()
     {
+        // Player와 충돌이고 윗방향키 입력 시
         if (tri == true && isbool == true && Input.GetAxisRaw("Vertical") == 1)
         {
             DataController.EarnMoney(amount);
             tri = false;
-            Invoke("triggerOn", 1);
+            Invoke("triggerOn", 1); // delay
         }
 
     }

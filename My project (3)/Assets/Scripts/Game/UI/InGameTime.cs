@@ -6,16 +6,12 @@ public class InGameTime : MonoBehaviour
 {
     Text Time;
     GameObject player;
-
-    // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
         Time = GetComponent<Text>();
     }
-
-    // Update is called once per frame
-    void Update()
+    void Update() // 소수점 한자리 gameTime UI
     {
         Time.text = "Time : " + string.Format("{0:N1}", player.GetComponent<PlayerMove>().GetGameTime()) + " Sec";
     }
