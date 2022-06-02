@@ -5,8 +5,7 @@ using UnityEngine.UI;
 public class LobbyInfo : MonoBehaviour
 {
     Text info;
-    // Start is called before the first frame update
-    void Start()
+    void Start() // 최고점수와 게임머니 표시
     {
         info = GetComponent<Text>();
         info.text = "★ BestRecord = " + DataController.GetHighscore().ToString() + " Seconds"

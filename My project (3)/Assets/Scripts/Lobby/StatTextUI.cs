@@ -9,7 +9,7 @@ public class StatTextUI : MonoBehaviour
     {
         stat = GetComponent<Text>();
         // 디버그용 임시 초기화
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
     }
     void Update()
     {
