@@ -15,6 +15,7 @@ public class MoveSceneToPortal : MonoBehaviour
             // Flag On이면 윗 방향키 입력시 Scene 이동
             if (Flag == 1)
             {
+                DataController.GameStartReset();//스탯 리셋
                 SceneManager.LoadScene(nextScene);
             }
         }
