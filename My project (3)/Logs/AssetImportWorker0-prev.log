@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.30f1 (1fb1bf06830e) revision 2077119'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'ko' Physical Memory: 16106 MB
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'ko' Physical Memory: 32646 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
@@ -11,187 +11,116 @@ C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/Kang Mingu/Documents/OpenSourceProject/My project (3)
+C:/Users/USER/Desktop/source tree/My project (3)
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55586
-Successfully changed project path to: C:/Users/Kang Mingu/Documents/OpenSourceProject/My project (3)
-C:/Users/Kang Mingu/Documents/OpenSourceProject/My project (3)
+51357
+Successfully changed project path to: C:/Users/USER/Desktop/source tree/My project (3)
+C:/Users/USER/Desktop/source tree/My project (3)
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 86.47 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 40.81 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.30f1 (1fb1bf06830e)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Kang Mingu/Documents/OpenSourceProject/My project (3)/Assets
+[Subsystems] Discovering subsystems at path C:/Users/USER/Desktop/source tree/My project (3)/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce MX350 (ID=0x1c94)
+    Renderer: NVIDIA GeForce RTX 3080 (ID=0x2206)
     Vendor:   
-    VRAM:     1979 MB
-    Driver:   30.0.15.1169
+    VRAM:     10078 MB
+    Driver:   30.0.15.1179
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56076
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56852
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006427 seconds.
+Registered in 0.002074 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 86.03 ms, found 3 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 40.12 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.223 seconds
+- Completed reload, in  0.464 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1224ms)
-		BeginReloadAssembly (182ms)
+	ReloadAssembly (465ms)
+		BeginReloadAssembly (51ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (861ms)
-			LoadAssemblies (175ms)
+		EndReloadAssembly (356ms)
+			LoadAssemblies (50ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (245ms)
+			SetupTypeCache (115ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (49ms)
-			SetupLoadedEditorAssemblies (369ms)
+			RebuildScriptCaches (22ms)
+			SetupLoadedEditorAssemblies (138ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (86ms)
-				BeforeProcessingInitializeOnLoad (32ms)
-				ProcessInitializeOnLoadAttributes (200ms)
-				ProcessInitializeOnLoadMethodAttributes (43ms)
+				RefreshPlugins (40ms)
+				BeforeProcessingInitializeOnLoad (14ms)
+				ProcessInitializeOnLoadAttributes (59ms)
+				ProcessInitializeOnLoadMethodAttributes (21ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007043 seconds.
+Registered in 0.002930 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000226FF757680 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563882020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FEE40C20 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002256338B030 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225636BB350 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225637CA010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225637DD220 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225637DD220 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563660180 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF7C2FC0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225637F2630 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF65E560 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF68DD70 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563611AB0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF68DD70 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF7C2FC0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF7C2FC0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225646A5210 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF7C2FC0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022564516E30 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563D6F010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF7855D0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563940630 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF375C50 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FFBD26B0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF7855D0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF7C2FC0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022562FBDC90 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022564950E40 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF972A30 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF8350B0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FFACFE40 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563B2E190 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563F5CDD0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022562FD1EA0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FFBD26B0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563C97C30 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 78.69 ms, found 3 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 39.97 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.489 seconds
+- Completed reload, in  0.872 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2490ms)
-		BeginReloadAssembly (324ms)
+	ReloadAssembly (873ms)
+		BeginReloadAssembly (117ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (33ms)
-		EndReloadAssembly (2006ms)
-			LoadAssemblies (256ms)
+			CreateAndSetChildDomain (14ms)
+		EndReloadAssembly (707ms)
+			LoadAssemblies (79ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (685ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (117ms)
-			SetupLoadedEditorAssemblies (659ms)
+			SetupTypeCache (226ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (274ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
+				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (79ms)
-				BeforeProcessingInitializeOnLoad (155ms)
-				ProcessInitializeOnLoadAttributes (361ms)
-				ProcessInitializeOnLoadMethodAttributes (33ms)
-				AfterProcessingInitializeOnLoad (24ms)
+				RefreshPlugins (40ms)
+				BeforeProcessingInitializeOnLoad (68ms)
+				ProcessInitializeOnLoadAttributes (146ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2403 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 110.0 MB.
-System memory in use after: 110.0 MB.
+Unloading 2402 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 109.9 MB.
+System memory in use after: 109.9 MB.
 
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 2838.
-Total: 5.229600 ms (FindLiveObjects: 0.154700 ms CreateObjectMapping: 0.074700 ms MarkObjects: 4.729600 ms  DeleteObjects: 0.268900 ms)
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 2837.
+Total: 2.492600 ms (FindLiveObjects: 0.163200 ms CreateObjectMapping: 0.112500 ms MarkObjects: 2.105600 ms  DeleteObjects: 0.110600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -205,126 +134,79 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts/Lobby/GameExit.cs
-  artifactKey: Guid(f05b19070d7c4014bb9b83c33ce8345b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Lobby/GameExit.cs using Guid(f05b19070d7c4014bb9b83c33ce8345b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6a8521c070491618705f856171b5bbe') in 0.098850 seconds 
+  path: Assets/Scripts/Game/SpawnSystemManager.cs
+  artifactKey: Guid(bcc749c501d47f84a86f09ce12a4e8ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Game/SpawnSystemManager.cs using Guid(bcc749c501d47f84a86f09ce12a4e8ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba879064153db53d16d854f8787bad67') in 0.021079 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/Scripts/Game/SuperJump.cs
+  artifactKey: Guid(cc3f8eb81e0004c4987f807517f863e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Game/SuperJump.cs using Guid(cc3f8eb81e0004c4987f807517f863e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '337904a5c813007d9c5b76a299910e95') in 0.001360 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.111543 seconds.
+  path: Assets/Scripts/Game/Terrain
+  artifactKey: Guid(fdf4b0120fdb7a340bcaa14ff7e2d50d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Game/Terrain using Guid(fdf4b0120fdb7a340bcaa14ff7e2d50d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74744d6e1efae88b418b4ad24a962253') in 0.001438 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.636452 seconds.
+  path: Assets/Scripts/Game/UI/GameStat.cs
+  artifactKey: Guid(d403134794b0a8d49bacc8907be1c699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Game/UI/GameStat.cs using Guid(d403134794b0a8d49bacc8907be1c699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2edcbcb9c090f065530f88ed8555b427') in 0.001622 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 34.435530 seconds.
+  path: Assets/Scripts/Game/UI/GameStartButton.cs
+  artifactKey: Guid(9e6d267c1d1f6194490fc7cc0046774c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Game/UI/GameStartButton.cs using Guid(9e6d267c1d1f6194490fc7cc0046774c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd9cb4251162db420e6b433e99b4731d') in 0.001445 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.007642 seconds.
+Registered in 0.002876 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-0000022564C41010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225680F8810 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022564514820 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022567E9E640 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225682B3010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563E81020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225682B3010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563E81020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022569754070 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225682B3010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002256448F010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022565232030 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022564514820 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225682B3010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563ECA230 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563ECA230 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022565243440 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022569754070 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022569754070 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563B41020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225651C8C30 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022566CD8410 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002256800F010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563E88430 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022567618020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022567ECF340 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022566CFD220 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022564750010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225693A2FD0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225642E0080 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022567ECF340 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225635FA850 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF8287E0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF56CE30 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF7CA1D0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF1F1010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.488 seconds
+- Completed reload, in  0.780 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1489ms)
-		BeginReloadAssembly (198ms)
+	ReloadAssembly (780ms)
+		BeginReloadAssembly (95ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (45ms)
-		EndReloadAssembly (1172ms)
-			LoadAssemblies (187ms)
+			CreateAndSetChildDomain (26ms)
+		EndReloadAssembly (637ms)
+			LoadAssemblies (78ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (373ms)
+			SetupTypeCache (223ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (53ms)
-			SetupLoadedEditorAssemblies (476ms)
+			RebuildScriptCaches (33ms)
+			SetupLoadedEditorAssemblies (233ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (154ms)
-				ProcessInitializeOnLoadAttributes (278ms)
-				ProcessInitializeOnLoadMethodAttributes (18ms)
-				AfterProcessingInitializeOnLoad (16ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (68ms)
+				ProcessInitializeOnLoadAttributes (146ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.69 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.45 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2357 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 105.9 MB.
-System memory in use after: 106.0 MB.
+Unloading 2356 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.8 MB.
+System memory in use after: 105.9 MB.
 
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2841.
-Total: 2.957600 ms (FindLiveObjects: 0.209100 ms CreateObjectMapping: 0.046600 ms MarkObjects: 2.500700 ms  DeleteObjects: 0.199900 ms)
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2840.
+Total: 2.364400 ms (FindLiveObjects: 0.163300 ms CreateObjectMapping: 0.097800 ms MarkObjects: 2.004300 ms  DeleteObjects: 0.097800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -338,255 +220,110 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 128.990767 seconds.
-  path: Assets/Scripts/Lobby/MoveSceneToPortal.cs
-  artifactKey: Guid(a2c33703e4231e54e9be686ba5c3e0d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Lobby/MoveSceneToPortal.cs using Guid(a2c33703e4231e54e9be686ba5c3e0d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '636a861bc436a66e50633414e795630e') in 0.009482 seconds 
+  Time since last request: 376.626766 seconds.
+  path: Assets/Audio/Effect/handgun.wav
+  artifactKey: Guid(50f20152b05fb994e9358b0dbaa8cd38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Effect/handgun.wav using Guid(50f20152b05fb994e9358b0dbaa8cd38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f284e16a14e014b6eef3dd4f2bde144') in 0.073358 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000124 seconds.
+  path: Assets/Audio/Effect/업그레이드 완료 효과음 _ Daniel Simion.mp3
+  artifactKey: Guid(dfdd6fd1fcef31340b7873735192f1ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Effect/업그레이드 완료 효과음 _ Daniel Simion.mp3 using Guid(dfdd6fd1fcef31340b7873735192f1ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47f17a94c4b9a744ca222d341b339f06') in 0.007676 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Audio/Effect/snipersound.wav
+  artifactKey: Guid(f7880ea5bb894114e8477e8ec3c07308) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Effect/snipersound.wav using Guid(f7880ea5bb894114e8477e8ec3c07308) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0cc9eaa2139952a40dba82c8dfdf3ec') in 0.006476 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Audio/Effect/스프링 밟을 시 나는 소리.wav
+  artifactKey: Guid(64bdfc4b746a3944fa93186a00bab4dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Effect/스프링 밟을 시 나는 소리.wav using Guid(64bdfc4b746a3944fa93186a00bab4dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f31fdaaea7abdd5a2487ca13e9802663') in 0.006405 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/Audio/Effect/로비 같은곳 입장할때 사용하면 좋을 effect.wav
+  artifactKey: Guid(89218716a4680444890c383aa691b769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Effect/로비 같은곳 입장할때 사용하면 좋을 effect.wav using Guid(89218716a4680444890c383aa691b769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03fe42c488b122fdf55f812b0c42ecc0') in 0.008885 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000116 seconds.
+  path: Assets/Audio/Effect/상자획득시 나오는 효과음.mp3
+  artifactKey: Guid(f033de517d18a4b438d90dd11c062743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Effect/상자획득시 나오는 효과음.mp3 using Guid(f033de517d18a4b438d90dd11c062743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f860fd3f9c6cf521ab81f8ecadaf406') in 0.006637 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.990357 seconds.
+  path: Assets/Audio/BGM/BGM.mp3
+  artifactKey: Guid(fbd26fe39bd5c7341bb5dea88376363c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/BGM/BGM.mp3 using Guid(fbd26fe39bd5c7341bb5dea88376363c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '530f3e3b1124d678bd13d26bc22041b6') in 0.007354 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.291227 seconds.
+  path: Assets/Prefabs/Item/Treasure.prefab
+  artifactKey: Guid(6994984bffcc92b4fb76c6c5afa4cffb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Item/Treasure.prefab using Guid(6994984bffcc92b4fb76c6c5afa4cffb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afdb0cc80d5892aa23b2b7981d0f7a86') in 0.068116 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 64.369816 seconds.
+  path: Assets/Scripts/Game/Item/Treasure.cs
+  artifactKey: Guid(b54e4e0adc87b6c44b6d7a56f79e6695) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Game/Item/Treasure.cs using Guid(b54e4e0adc87b6c44b6d7a56f79e6695) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73531adad1708e669d3ceb84891b8ac3') in 0.001383 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.262673 seconds.
+  path: Assets/Scripts/Game/Item/Treasure.cs
+  artifactKey: Guid(b54e4e0adc87b6c44b6d7a56f79e6695) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Game/Item/Treasure.cs using Guid(b54e4e0adc87b6c44b6d7a56f79e6695) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '898215859c964eca0cc7dd283d582a2a') in 0.001409 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.014639 seconds.
+Registered in 0.002740 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-0000022564C41010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225680F5680 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF7CC5E0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225683AE250 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225680CF520 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563272020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF13B020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022564E08010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022567ECF340 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225680CF520 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225680A1010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225678E9030 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF487540 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF13B020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563D93D60 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563D93D60 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022567588440 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225635B9020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225635B9020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF847010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225636B60B0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563DC7010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022569754070 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FA110220 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022567618020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022567ECF340 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563DC7010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563E0C380 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225693A2FD0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563B41020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022567149020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002256ABEA230 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF266D90 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225635B9020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225638AFC30 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF365A40 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.432 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1432ms)
-		BeginReloadAssembly (168ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (14ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (30ms)
-		EndReloadAssembly (1165ms)
-			LoadAssemblies (189ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (388ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (44ms)
-			SetupLoadedEditorAssemblies (463ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (138ms)
-				ProcessInitializeOnLoadAttributes (285ms)
-				ProcessInitializeOnLoadMethodAttributes (14ms)
-				AfterProcessingInitializeOnLoad (20ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (12ms)
-Platform modules already initialized, skipping
+Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2357 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 106.0 MB.
-System memory in use after: 106.0 MB.
-
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2844.
-Total: 2.761200 ms (FindLiveObjects: 0.132100 ms CreateObjectMapping: 0.047000 ms MarkObjects: 2.352600 ms  DeleteObjects: 0.228600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007067 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000002256ABBB010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226D4C8BEB0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002256AC5BFC0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002256AD52A50 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225680CF520 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225646FD060 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002256BAFE030 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF698050 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225680CF520 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225680CF520 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF666570 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225678E9030 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022567322E40 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002256BAFE030 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF698050 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022566BB3020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022566ECF500 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225636433F0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225635B9020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022566CD8410 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022567AA7680 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022564984FE0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002256800F010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022567322E40 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022567AA7680 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225680CF520 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022564984FE0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022567AA7680 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225693A6630 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF9A0DA0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225680CF520 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002256750DC10 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF265D40 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF698050 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF68D780 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225680CF520 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.42 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.557 seconds
+- Completed reload, in  0.779 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1557ms)
-		BeginReloadAssembly (174ms)
+	ReloadAssembly (780ms)
+		BeginReloadAssembly (95ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (37ms)
-		EndReloadAssembly (1254ms)
-			LoadAssemblies (199ms)
+			CreateAndSetChildDomain (28ms)
+		EndReloadAssembly (636ms)
+			LoadAssemblies (79ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (397ms)
+			SetupTypeCache (219ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (59ms)
-			SetupLoadedEditorAssemblies (493ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (232ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (156ms)
-				ProcessInitializeOnLoadAttributes (298ms)
-				ProcessInitializeOnLoadMethodAttributes (17ms)
-				AfterProcessingInitializeOnLoad (14ms)
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (146ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.86 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.45 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2357 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 106.0 MB.
-System memory in use after: 106.0 MB.
+Unloading 2356 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 108.9 MB.
+System memory in use after: 109.0 MB.
 
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2847.
-Total: 3.486300 ms (FindLiveObjects: 0.131000 ms CreateObjectMapping: 0.044900 ms MarkObjects: 3.106000 ms  DeleteObjects: 0.202700 ms)
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2852.
+Total: 2.365100 ms (FindLiveObjects: 0.161300 ms CreateObjectMapping: 0.096500 ms MarkObjects: 2.014900 ms  DeleteObjects: 0.091700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -601,120 +338,118 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.008391 seconds.
+Registered in 0.003070 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-0000022564C41010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226D4B38830 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002256AC5BFC0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002256CD1AEE0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022567888020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225646FD060 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022567888020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022564E08010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF0EB020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022567888020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF847010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225678E9030 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002256AC5BFC0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022567888020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563D93D60 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022566BB3020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002256CD3BD60 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563D93D60 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563D93D60 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022566F76020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225633A3270 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022567A2D010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002256800F010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002256AC5BFC0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225633A3270 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF0EB020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002256AC0F090 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225682BCE40 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000225693A1DB0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002256BF40080 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000226FF0EB020 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002256718B980 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563B7F980 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022563D93D60 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002256AC5BFC0 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000022566C99010 doesn't match image C:\Users\Kang Mingu\Documents\OpenSourceProject\My project (3)\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.585 seconds
+- Completed reload, in  0.874 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1586ms)
-		BeginReloadAssembly (180ms)
+	ReloadAssembly (874ms)
+		BeginReloadAssembly (102ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (37ms)
-		EndReloadAssembly (1298ms)
-			LoadAssemblies (181ms)
+			CreateAndSetChildDomain (29ms)
+		EndReloadAssembly (719ms)
+			LoadAssemblies (87ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (408ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (68ms)
-			SetupLoadedEditorAssemblies (528ms)
+			SetupTypeCache (250ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (263ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
+				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (158ms)
-				ProcessInitializeOnLoadAttributes (327ms)
-				ProcessInitializeOnLoadMethodAttributes (13ms)
-				AfterProcessingInitializeOnLoad (19ms)
+				BeforeProcessingInitializeOnLoad (75ms)
+				ProcessInitializeOnLoadAttributes (168ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.05 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2357 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 106.0 MB.
-System memory in use after: 106.0 MB.
+Unloading 2356 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 109.0 MB.
+System memory in use after: 109.0 MB.
 
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2850.
-Total: 3.835600 ms (FindLiveObjects: 0.206600 ms CreateObjectMapping: 0.055200 ms MarkObjects: 3.379900 ms  DeleteObjects: 0.192700 ms)
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2855.
+Total: 2.603900 ms (FindLiveObjects: 0.172400 ms CreateObjectMapping: 0.097400 ms MarkObjects: 2.232600 ms  DeleteObjects: 0.100800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 4518.443707 seconds.
+  path: Assets/Scenes/Lobby2.unity
+  artifactKey: Guid(a2b75e143be678e4daddecf1b72f63cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Lobby2.unity using Guid(a2b75e143be678e4daddecf1b72f63cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abf1fe28ee1b1bedefea255e71795575') in 0.018374 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.728516 seconds.
+  path: Assets/Scripts/Game/UI/PauseMenu.cs
+  artifactKey: Guid(47c5000190f9414499867efe27fd2e94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Game/UI/PauseMenu.cs using Guid(47c5000190f9414499867efe27fd2e94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cec1cb319e530cf23b687d2c3ed40463') in 0.001489 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003046 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.785 seconds
+Domain Reload Profiling:
+	ReloadAssembly (785ms)
+		BeginReloadAssembly (94ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (26ms)
+		EndReloadAssembly (643ms)
+			LoadAssemblies (80ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (224ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (33ms)
+			SetupLoadedEditorAssemblies (236ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (69ms)
+				ProcessInitializeOnLoadAttributes (148ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.45 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2356 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 109.0 MB.
+System memory in use after: 109.0 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2858.
+Total: 2.364500 ms (FindLiveObjects: 0.168400 ms CreateObjectMapping: 0.094100 ms MarkObjects: 1.999800 ms  DeleteObjects: 0.101500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
