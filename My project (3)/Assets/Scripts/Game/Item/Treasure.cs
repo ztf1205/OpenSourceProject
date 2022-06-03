@@ -8,14 +8,6 @@ public class Treasure : MonoBehaviour
     public GameObject UpgradeText;
     public Transform hudPos;
 
-    AudioSource audioSource;
-    public AudioClip StepOnSound;
-
-    private void Awake()
-    {
-
-        audioSource = this.gameObject.GetComponent<AudioSource>();
-    }
 
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -23,7 +15,6 @@ public class Treasure : MonoBehaviour
         //플레이어와 충돌했다면 랜덤 업그레이드 or 돈 획득
         if (collision.gameObject.tag == "Player")
         {
-            this.audioSource.Play();
             if (DataController.RandomUpgrade() == false)
             {
                 DataController.EarnMoney(money);
