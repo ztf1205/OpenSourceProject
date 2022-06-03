@@ -139,6 +139,7 @@ public static class DataController
                 {
                     money -= cost;//돈 지불
                     SaveData();//변경 데이터 저장
+                    GameStartReset();//스탯 리셋
                     return true;//정상 종료
                 }
                 else//이미 풀 업그레이드라면

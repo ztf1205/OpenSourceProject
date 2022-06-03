@@ -7,6 +7,7 @@ public class ButtonFunction_Lobby : MonoBehaviour
 {
     public void GameStart()
     {
+        DataController.GameStartReset();//스탯 리셋
         SceneManager.LoadScene("Game");
     }
 
