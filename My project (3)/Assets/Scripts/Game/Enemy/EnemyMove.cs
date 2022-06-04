@@ -46,6 +46,7 @@ public class EnemyMove : MonoBehaviour
 
     private void Start()
     {
+        //엘리트몹 세팅
         if (isElite)
         {
             dropChance_treasure = 0.2f;
@@ -80,6 +81,7 @@ public class EnemyMove : MonoBehaviour
 
     private void Update()
     {
+        //사망처리
         if (deathFlag)
         {
             deathTimer += Time.deltaTime;

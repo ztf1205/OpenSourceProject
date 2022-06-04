@@ -2,21 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/* 공중 몹에 대한 스폰시스템 제작하기
- * 일반양과 주기, 엘리트양 저장
- * 제작하면 주기적으로 랜덤한 위치에 생성하도록 만들기
- * (오브젝트 주변의 사각틀 영역)
- * 
- * 퍼블릭으로는 스폰시스템 추가하는 것만 만들기
- * 
- * 지상몹도 추가하고 싶다면 타입지정 or 메소드를 여러개로
- * 
- */
-
 public class SpawnSystemManager : MonoBehaviour
 {
 
     private int timeStat = -1;
+
+    //주기적으로 스폰하는 스폰 시스템 추가
     public void addSpawnSystem(int normalSpawn, int eliteSpawn, float spawnCycle)
     {
         maxIdx++;
